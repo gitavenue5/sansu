@@ -1,0 +1,14 @@
+table, th, td {
+    text-align: center;
+}
+
+
+.gwbank {
+    text-align: center;
+    font-family: '나눔고딕', 바탕;
+    color: black;
+}
+
+#gwbank_pagination {
+    text-align: center;
+}

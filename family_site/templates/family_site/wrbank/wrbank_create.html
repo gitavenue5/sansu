@@ -1,0 +1,13 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block stylesheet %} {% static 'family_site/css/note/note_create.css' %} {% endblock stylesheet %}
+
+{% block content1 %}     
+
+    <form action='' method='post'>{% csrf_token %}  
+        {{ form|crispy }}  
+        <input class="btn btn-primary" type="submit" value="글완료" />    
+    </form>
+               
+{% endblock content1 %}

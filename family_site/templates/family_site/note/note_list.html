@@ -1,0 +1,64 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block stylesheet %} {% static 'family_site/css/note/note_list.css' %} {% endblock stylesheet %}
+
+{% block content1 %}
+
+    <table class='table table-bordered table-hover'>
+        <thead>
+            <tr>
+                <th>번 호</th>
+                <th>이 름</th>
+                <th>제 목</th>
+                <th>날 자</th>            
+            </tr>
+        </thead>
+        <tbody>
+            <tr>{% for i in object_list %}
+                <td>{{ i.id }}</td>
+                <td>{{ i.note_author }}</td>
+                <td>                
+                    <a href="{{ i.get_absolute_url }}">{{ i.note_title|truncatechars:50 }}
+                        {% if i.comments.count == 0 %}
+                          {{''}}
+                        {%else%}
+                          <span>{{i.comments.count}}</span></a>
+                        {% endif %}
+                </td>
+                <td>{{ i.note_created_date|date:'Y-m-d H:m:s' }}</td>
+            </tr>{% endfor %}
+        </tbody>
+    </table>
+
+    {% if user.is_active %}
+    <a class='btn btn-default' href="{% url 'family_site:note_create' %}">글쓰기</a>
+    
+    {% endif %}
+
+    <div id="note_pagination">
+        {% if is_paginated %}
+          <ul class="pagination">
+            {% if page_obj.has_previous %}
+              <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in paginator.page_range %}
+              {% if page_obj.number == i %}
+                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+              {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% if page_obj.has_next %}
+              <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+          </ul>
+        {% endif %}
+    </div><!-- pagination end -->     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content1 %}

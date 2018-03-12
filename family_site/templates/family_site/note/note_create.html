@@ -1,0 +1,14 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block stylesheet %} {% static 'family_site/css/note/note_create.css' %} {% endblock stylesheet %}
+
+{% block content1 %}            
+            <p>사진 사이즈가 크면 등록되지 않습니다.</p>
+            <form action='' method='post' enctype="multipart/form-data">{% csrf_token %}  
+                {{ form|crispy }}  
+                <input class="btn btn-success" type="submit" value="글완료" />    
+                <a class='btn btn-primary' href="{% url 'family_site:note_list' %}">취 소</a><br><br><br>
+            </form><br><br><br>
+               
+{% endblock content1 %}

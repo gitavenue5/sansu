@@ -1,0 +1,60 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% load humanize %}
+{% block stylesheet %} {% static 'family_site/css/gwbank/gwbank_list.css' %} {% endblock stylesheet %}
+
+{% block content1 %}
+<P>- 이채순 계 : {{ chaesun|intcomma }}, - 이기창 계 : {{ gichang|intcomma }}, - 이화순 계 : {{ hwasun|intcomma }}. </p>
+  <!--<button class='btn btn-default' onclick="location.href='{% url 'family_site:wrbank_list' %}';">우리은행보기</button>-->
+    <div id='gwbank_wrap'>
+        <h4 class='gwbank'>어머님 광주은행 통장 내역</h4>
+        <table class='table table-bordered table-hover'>
+            <thead>
+                <tr>
+                    <th>날 자</th>
+                    <th>입＊출금</th>
+                    <th>금 액</th>
+                    <th>이 름</th>
+                    <th>실 행</th>
+                    <th>비 고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>{% for i in object_list%}
+                    <td>{{ i.gwbank_date|date:'Y-m-d' }}</td>
+                    <td>{{ i.gwbank_income }}</td>
+                    <td>{{ i.gwbank_money|intcomma }}</td>
+                    <td>{{ i.gwbank_name }}</td>
+                    <td>{{ i.gwbank_execution|intcomma|default:" " }}</td>
+                    <td>{{ i.gwbank_note  }}</td>
+                </tr>{% endfor %}            
+            </tbody>
+        </table>
+    </div>
+   
+<div id="gwbank_pagination">
+    {% if is_paginated %}
+      <ul class="pagination">
+        {% if page_obj.has_previous %}
+          <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+          <li class="disabled"><span>&laquo;</span></li>
+        {% endif %}
+        {% for i in paginator.page_range %}
+          {% if page_obj.number == i %}
+            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+          {% else %}
+            <li><a href="?page={{ i }}">{{ i }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+          <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+        {% else %}
+          <li class="disabled"><span>&raquo;</span></li>
+        {% endif %}
+      </ul>
+    {% endif %}
+</div><!-- pagination end -->
+
+
+{% endblock content1 %}

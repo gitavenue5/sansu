@@ -1,0 +1,63 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block stylesheet %} {% static 'family_site/css/note/note_detail.css' %} {% endblock stylesheet %}
+
+{% block content1 %}
+
+    <div id='note_detail'>
+   
+        <h4 id='title' class="alert alert-info" role="alert"> {{ object.note_title }}</h4>
+        <p>글쓴이 : {{ object.note_author }} <span> 등록일 : {{ object.note_created_date|date:'Y-m-d t:m:s' }}</span></p>
+        <hr>
+        <p>{{ object.note_content|safe|linebreaksbr }}</p>                       
+    </div><br><br>
+    
+    
+    {% if user.is_active %}
+        <a class="btn btn-default" href="{% url 'family_site:notecomment_create' pk=note.pk %}">댓글 쓰기</a>
+    {% endif%}
+    {% if note.note_author == request.user %}
+        <a class='btn btn-default' href="{% url 'family_site:note_update' pk=note.id %}">수정</a>
+        <a class='btn btn-default' href="{% url 'family_site:note_delete' pk=note.id %}">삭제</a>
+        <a class='btn btn-default' href="{% url 'family_site:note_list' %}">목록</a>
+    {% endif %}  
+<br><br><hr>
+
+{% for i in note.comments.all %}
+<div id='comments_count'>
+        {{i.note.comments.count}}의 댓글이 있습니다.
+</div>
+<div id='comment'>
+    <ul>
+        <li>{{i.notecomment_author}}
+            <span>{{ i.notecomment_publish_date|date:'Y-m-d H:m:s' }}</span>
+        
+            {% if i.notecomment_author == request.user %}
+                <span><a href='{% url 'family_site:notecomment_update' note.pk i.pk %}'>수정</a></span>
+                <span><a href='{% url 'family_site:notecomment_delete' note.pk i.pk %}'>삭제</a></span>
+            {% endif %}
+        </li> 
+            <li>{{ i.notecomment_content|linebreaksbr }}</li>          
+               
+    </ul>
+</div>
+{% endfor %}
+
+    <p>
+        
+
+        {% if object.get_next_by_note_created_date %}
+            <a class='btn btn-info' href="{{ object.get_next_note_created_date.get_absolute_url }}">이전글</a>
+        {% endif %}  
+        
+        {% if object.get_previous_by_note_created_date %}
+            <a class="btn btn-info" href="{{ object.get_previous_note_created_date.get_absolute_url }}">다음글</a>
+        {% endif %}
+
+        
+
+          
+    </p><br><br><br><br><br><br><br>
+
+{% endblock content1 %}

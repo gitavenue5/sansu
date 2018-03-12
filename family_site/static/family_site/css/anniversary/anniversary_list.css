@@ -1,0 +1,12 @@
+table, tr, th, td {
+    text-align: center;
+}
+
+h3 {
+    font-family: '고딕', 나눔고딕, 바탕체;
+}
+
+#anniversary{
+    text-align: center;
+    color: black;
+}

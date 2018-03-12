@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load humanize %}
+
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> {% block title %} Sansu-Memory {% endblock title %} </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Miltonian+Tattoo|Permanent+Marker|Risque" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main_layout.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}  {% endblock stylesheet %}" />  
+
+</head>
+<body>
+
+<div id="base_page_wrap"><!-- 전체페이지 wrapper 시작 div -->
+
+    <div class="container-fluid" id="nav">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="{% url 'sansu' %}">Home</a></li>  
+        <li><a href="{% url 'family_site:daily_list' %}">일 상</a></li>    
+        <li><a href="{% url 'family_site:anniversary_list' %}">기념일</a></li> 
+        <li><a href="{% url 'family_site:gwbank_list' %}">은 행</a></li> 
+        <li><a href="{% url 'family_site:note_list' %}">게시판</a></li>          
+        <li id='login_signup'>
+            {% if user.is_active %}
+                <span class='welcome'>Welcome
+                    <strong>{% firstof user_get_short_name user.get_username  %}</strong>               
+                    <a class='btn btn-default' href='{% url 'logout' %}'>로그아웃</a>
+                </snan>
+            {% else %}                
+                <span class='welcome'><a class='btn btn-default' href='{% url 'login' %}'>로그인</a>
+                    <a class='btn btn-default' href='{% url 'register' %}'>회원가입</a>
+                </span>
+            {% endif %}
+        </li>       
+     </ul>        
+                
+    </div><!-- nav-container-fluid end-->    
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4 class="alert alert-success" role="alert">Sansu-Memory &nbsp;&nbsp;{% now 'Y.m.d' %}</h4>
+                {% block content1 %}
+        
+                <div class="jumbotron">
+                        <h2>Sansu-Memory!</h2>
+                        <p style='border-left:5px solid gray; padding-left:20px;'></p>
+                      </div>
+                {% endblock content1 %}
+
+            </div><!-- col-xs-12 end -->
+        </div><!-- row end -->
+    </div><!-- class  container end-->
+
+    <!-- 2번째 container_fluid -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4></h4>
+
+                {% block content2 %}
+
+                {% endblock content2 %}
+
+            </div><!-- col-xs-12 end -->
+        </div><!-- row end -->
+    </div><!-- class  container end-->
+
+</div><!-- 전체페이지 base_page_wrap end -->
+
+    {% block footer %}
+    {% endblock footer %}
+
+    {% block script %}
+    {% endblock script %}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+</html>

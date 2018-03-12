@@ -1,0 +1,26 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% block stylesheet %} {% static 'family_site/css/anniversary/anniversary_list.css' %} {% endblock stylesheet %}
+
+{% block content1 %}
+<h3 id='anniversary'>2018년 기념일</h3>
+<table class='table table-bordered table-hover'>
+    <thead>
+        <tr>
+            <th>기념일</th>
+            <th>요 일</th>
+            <th>이&nbsp;&nbsp;름</th>
+            <th>음&nbsp;&nbsp;력</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>{% for i in object_list %}
+            <td>{{ i.anniversary_date }}</td>
+            <td>{{ i.anniversary_day }}</td>
+            <td>{{ i.anniversary_name }}</td>
+            <td>{{ i.anniversary_lunar_date }}</td>
+        </tr>{% endfor %}
+    </tbody>
+</table>
+<br><br><br><br><br><br>
+{% endblock content1 %}

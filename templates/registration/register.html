@@ -1,0 +1,36 @@
+{% extends 'main_layout.html' %}
+
+{% block title %} 회원가입 {% endblock title %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block stylesheet %} {% static "css/register/register_list.css" %} {% endblock stylesheet %}
+
+
+{% block content1 %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <div>
+                <h2>회원가입</h2>
+                <p>- 게시판만 로그인이 필요합니다.</p>
+                <p>- 이름은 실명이 아니어도 됩니다.</p>
+                <p>- 회원가입을 마치면, 다시 한번 로그인을 해야 합니다'</p>
+            </div>  
+
+            <form action='.' method='post'>{% csrf_token %}               
+                {{ form|crispy }}    
+
+                <input class="btn btn-primary" type="submit" value="회원가입" />               
+                
+            </form>
+            
+            <script type='text/javascript'>
+                document.getElementById('id_note_user').focus();
+            </script>
+
+        </div>
+    </div>
+</div>
+{% endblock content1 %}

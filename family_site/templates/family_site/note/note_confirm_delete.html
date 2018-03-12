@@ -1,0 +1,19 @@
+
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block stylesheet %} {% static 'family_site/css/note/note_list.css' %} {% endblock stylesheet %}
+
+{% block content1 %}
+<br>
+<h3 style='color:brown'>삭제 할까요?</h3>
+<br><br>
+
+<form method="post" action="">{% csrf_token %}
+    {{ form|crispy }}
+    <input class='btn btn-danger' type='submit' value='삭제'>
+    <a class='btn btn-primary' href="{% url 'family_site:note_list' %}">취 소</a><br>
+</form><br>
+       
+    
+{% endblock content1 %}

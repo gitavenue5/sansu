@@ -1,0 +1,6 @@
+{% load crispy_forms_tags %}
+
+<form action='' method='post'>{% csrf_token %}  
+    {{ form|crispy }}  
+    <input class="btn btn-primary" type="submit" value="글완료" />    
+</form>

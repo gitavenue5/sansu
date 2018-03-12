@@ -1,0 +1,14 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% block stylesheet %} {% static 'family_site/css/daily/daily_list.css' %} {% endblock stylesheet %}
+
+{% block content1 %}
+
+{% for i in object_list%}
+<div id='daily'>
+    <p>{{ i.daily_date|date:'Y-m-d' }} <span>({{ i.daily_day }})</span></p>
+    <p>{{ i.daily_content|safe }}</p>
+</div>
+{% endfor %}
+
+{% endblock content1 %}

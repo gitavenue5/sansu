@@ -1,0 +1,21 @@
+#wrbank_wrap {
+    text-align: center;
+}
+
+#wrbank_wrap h4 {
+    text-align: center;
+    font-family: '나눔고딕', 고딕, 바탕;
+    color: black;
+}
+
+#wrbank_wrap table, th, td {
+    text-align: center;
+}
+
+#wrbank_pagination {
+    text-align: center;
+}
+
+#loan {
+    color: maroon;
+}

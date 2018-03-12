@@ -1,0 +1,17 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block stylesheet %} {% static 'family_site/css/note/note_list.css' %} {% endblock stylesheet %}
+
+{% block content1 %}
+
+<form method="post" action="">{% csrf_token %}
+    {{ form|crispy }}
+</form>
+   
+
+<a class='btn btn-primary' href="{% url 'family_site:note_create' %}">글수정</a>
+<a class='btn btn-primary' href="{% url 'website:note_list' %}">취 소</a><br>
+       
+    
+{% endblock content1 %}

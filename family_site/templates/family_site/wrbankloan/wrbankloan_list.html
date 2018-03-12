@@ -1,0 +1,90 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block stylesheet %} {% static 'family_site/css/note/note_create.css' %} {% endblock stylesheet %}
+
+{% block content1 %}   
+
+<div id="wrbank_list_wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" id="main_image">
+
+            <p>대출금액 : 75,000,000원.</p>
+            <p>- 이자 납입 : 2015년 12월부터.</p>
+            <p>- 원금 상환 : 2016년 12월부터.</p>
+            <p>- 만기일 : 2045년 11월 10일.</p>
+
+                <p><strong>- {{aa|intcomma}} - {{ bb|intcomma }} - {{ cc|intcomma }}</strong></p>
+
+
+             <div id="wrbankloan">
+
+                 <input type="button" onclick="location.href='{% url 'family_site:gwbank_list' %}';" value="광주은행" />
+                 <input type="button" onclick="location.href='{% url 'family_site:wrbank_list' %}';" value="우리은행" />
+
+
+                 <h4>우리은행 대출 내역</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>회 차</th>
+                            <th>날 자</th>
+                            <th>이 자</th>
+                            <th>원 금</th>
+                            <th>이자+원금</th>
+                            <th>대출잔액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in object_list %}
+                        <tr>
+                            <td>{{ i.wrbankloan_inning }}</td>
+                            <td>{{ i.wrbankloan_date|date:'Y.m.d' }}</td>
+                            <td>{{ i.wrbankloan_interest|intcomma }}</td>
+                            <td>{{ i.wrbankloan_principal|intcomma }}</td>
+                            <td>{{ i.wrbankloan_total|intcomma }}</td>
+                            <td>{{ i.wrbankloan_loanbalance|intcomma }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+             </div>
+
+
+
+                <!-- 페이징 -->
+                <div id="note_pagination">
+                    {% if is_paginated %}
+                      <ul class="pagination">
+                        {% if page_obj.has_previous %}
+                          <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                        {% else %}
+                          <li class="disabled"><span>&laquo;</span></li>
+                        {% endif %}
+                        {% for i in paginator.page_range %}
+                          {% if page_obj.number == i %}
+                            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                          {% else %}
+                            <li><a href="?page={{ i }}">{{ i }}</a></li>
+                          {% endif %}
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                          <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                        {% else %}
+                          <li class="disabled"><span>&raquo;</span></li>
+                        {% endif %}
+                      </ul>
+                    {% endif %}
+                </div>
+
+
+            </div><!-- col-xs-12 end -->
+        </div><!-- row end -->
+    </div><!-- class  container end-->
+</div><!--  note_list_wrap end-->
+
+
+
+
+{% endblock content1 %}
