@@ -81,15 +81,7 @@
     {% block script %}
     {% endblock script %}
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<br><br><br><br><br><br><br><br><br><br>
-<script>
-    $.ajaxSetup({
-        data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
-    });
-</script>
+    <br><br><br><br><br><br>
 
 </body>
 </html>

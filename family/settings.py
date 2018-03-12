@@ -55,10 +55,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'django.middleware.csrf.CsrfViewMiddleware'
+    
+
+    
 ]
 
 ROOT_URLCONF = 'family.urls'
+
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE=True
+#SESSION_COOKIE_AGE = 10
+SESSION_SAVE_EVERY_REQUEST = True
 
 TEMPLATES = [
     {
