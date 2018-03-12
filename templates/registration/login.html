@@ -12,11 +12,8 @@
                 <h2>로그인</h2>
             </div>
     
-            {% if form.errors%}
-                <p>아이디나 비밀번호가 일치하지 않습니다!</p>
-            {% endif %}
-
-            <form action='' method='post'>{% csrf_token %}  
+            <form action='' method='post'>
+                {% csrf_token %}  
                 {{ form|crispy }}                 
             
                 <input class="btn btn-primary" type="submit" value="로그인" />   
