@@ -4,7 +4,22 @@
 {% block stylesheet %} {% static 'family_site/css/gwbank/gwbank_list.css' %} {% endblock stylesheet %}
 
 {% block content1 %}
-<P>- 이채순 계 : {{ chaesun|intcomma }}, - 이기창 계 : {{ gichang|intcomma }}, - 이화순 계 : {{ hwasun|intcomma }}. </p>
+
+
+<form>
+  <select class='btn btn-default' id='s'>
+   <option selected="selected">이름 선택</option>
+   <option onclick="chae('이채순')">이채순</option>   
+   <option onclick="chae('이기창')">이기창</option> 
+   <option onclick="chae('이화순')">이화순</option> 
+  </select> 
+  <button id='kkk' class='btn btn-default'>감추기</button>
+</form>
+
+<div id='k'></div>
+<br>
+<p>이채순 계 : {{ chaesun|intcomma }}원, &nbsp; 이기창 계 : {{ gichang|intcomma }}원, &nbsp; 이화순 계 : {{ hwasun|intcomma }}원.</p> 
+<br>
   <!--<button class='btn btn-default' onclick="location.href='{% url 'family_site:wrbank_list' %}';">우리은행보기</button>-->
     <div id='gwbank_wrap'>
         <h4 class='gwbank'>어머님 광주은행 통장 내역</h4>
@@ -19,15 +34,15 @@
                     <th>비 고</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>{% for i in object_list%}
+            <tbody>{% for i in object_list%}
+                <tr>
                     <td>{{ i.gwbank_date|date:'Y-m-d' }}</td>
                     <td>{{ i.gwbank_income }}</td>
                     <td>{{ i.gwbank_money|intcomma }}</td>
                     <td>{{ i.gwbank_name }}</td>
                     <td>{{ i.gwbank_execution|intcomma|default:" " }}</td>
                     <td>{{ i.gwbank_note  }}</td>
-                </tr>{% endfor %}            
+                </tr> {% endfor %}           
             </tbody>
         </table>
     </div>
@@ -56,5 +71,6 @@
     {% endif %}
 </div><!-- pagination end -->
 
+<br><br><br>
 
 {% endblock content1 %}

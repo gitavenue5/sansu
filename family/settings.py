@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'family.urls'
 
-
+# 세션 관련 
 SESSION_EXPIRE_AT_BROWSER_CLOSE=True
 #SESSION_COOKIE_AGE = 10
 SESSION_SAVE_EVERY_REQUEST = True
@@ -131,6 +131,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+#REST_FRAMEWORK = {
+ #   'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+  #  'PAGINATE_BY': 10,
+   # 'PAGE_SIZE': 10
+#}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/

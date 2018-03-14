@@ -1,7 +1,12 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 
-from . models import WrBank
+from . models import GwBank, WrBank
+
+class GwBankSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = GwBank
+        fields = ('gwbank_date', 'gwbank_income', 'gwbank_money', 'gwbank_name', 'gwbank_execution', 'gwbank_note', )
 
 class WrBankSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

@@ -7,11 +7,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from rest_framework import routers
-from family_site.views import WrBankViewSet
+from family_site.views import GwBankViewSet, WrBankViewSet
 
 from family.views import  SansuTemplateView, UserCreateView, UserCreateDoneTemplateView
 
 router = routers.DefaultRouter()
+router.register(r'gwbank_api', GwBankViewSet)
 router.register(r'wrbank_api', WrBankViewSet)
 
 

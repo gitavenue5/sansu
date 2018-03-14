@@ -19,7 +19,7 @@ from django.db.models import F, Sum, Count, Case, When
 #from django.contrib.auth.models import User
 from rest_framework import viewsets
 
-from . serializers import WrBankSerializer
+from . serializers import GwBankSerializer, WrBankSerializer
 
 from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment 
 from . forms import DailyForm, AnniversaryForm, GwBankForm, WrBankForm, NoteForm, NoteCommentForm, NoteCommentUpdateForm 
@@ -65,9 +65,9 @@ class AnniversaryListView(ListView):
 
 
 # 광주은행
-#class GwBankViewSet(viewsets.ModelViewSet):
- #   queryset = GwBank.objects.all()
-  #  serializer_class = GwBankSerializer
+class GwBankViewSet(viewsets.ModelViewSet):
+    queryset = GwBank.objects.all()
+    serializer_class = GwBankSerializer
 
 class GwBankCreateView(CreateView):
     model = GwBank
@@ -99,6 +99,8 @@ class GwBankListView(ListView):
         context['chaesun'] = GwBank.objects.filter(gwbank_name='이채순').aggregate(이채순=Sum(F('gwbank_money')))['이채순'] or 0
         context['gichang'] = GwBank.objects.filter(gwbank_name='이기창').aggregate(이기창=Sum(F('gwbank_money')))['이기창'] or 0
         context['hwasun'] = GwBank.objects.filter(gwbank_name='이화순').aggregate(이화순=Sum(F('gwbank_money')))['이화순'] or 0
+        #context['k'] = GwBank.objects.filter(gwbank_name='이채순')
+        context['k'] = GwBank.objects.all()
         return context
 
 

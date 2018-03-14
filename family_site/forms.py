@@ -39,7 +39,7 @@ class GwBankForm(forms.ModelForm):
     gwbank_date = forms.DateField(initial=datetime.date.today(), widget=SelectDateWidget(None, range(2014, THIS_YEAR+10)))
     class Meta:
         model = GwBank
-        fields = ('gwbank_date', 'gwbank_income', 'gwbank_money', 'gwbank_name', 'gwbank_execution', 'gwbank_note', )
+        fields = ('gwbank_name_choices', 'gwbank_date', 'gwbank_income', 'gwbank_money', 'gwbank_name', 'gwbank_execution', 'gwbank_note', )
 
 
 # 우리은행
