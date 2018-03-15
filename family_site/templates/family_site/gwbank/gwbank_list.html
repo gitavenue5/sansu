@@ -20,7 +20,7 @@
 <br>
 <p>이채순 계 : {{ chaesun|intcomma }}원, &nbsp; 이기창 계 : {{ gichang|intcomma }}원, &nbsp; 이화순 계 : {{ hwasun|intcomma }}원.</p> 
 <br>
-  <button class='btn btn-default' onclick="location.href='{% url 'family_site:wrbank_list' %}';">우리은행보기</button>
+  <a class='btn btn-default' href='{% url 'family_site:wrbank_list' %}">우리은행보기</a>
     <div id='gwbank_wrap'>
         <h4 class='gwbank'>어머님 광주은행 통장 내역</h4>
         <table class='table table-bordered table-hover'>
