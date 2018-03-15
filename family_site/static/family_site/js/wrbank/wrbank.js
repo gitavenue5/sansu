@@ -12,7 +12,7 @@ function income(ttt){
                                 + comma(this['wrbank_aggregate']) + '</td><td style="width:8%";>' + comma(this['wrbank_loan_balance']) + '</td><td style="width:10%";>' + comma(this['wrbank_bankbook_balance']) + '</td>' ; 
                                                             
                     if(this['wrbank_deposit_withdrawal']==ttt){
-                        $('#wbl').append('<table class="table table-bordered table-hover"><tr>'+ t + '</tr></table>').css({'margin': '10px'})};
+                        $('#wbl').append('<table class="table table-bordered table-hover"><tr>'+ t + '</tr></table>').css({'margin': '20px'})};
                 })//each
             }//if
         })//json

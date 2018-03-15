@@ -38,7 +38,7 @@ function chae(name){
                 + this['gwbank_income'] + '</td><td>' + this['gwbank_name'] + '</td><td>' + comma(this['gwbank_money']) + '</td>';
              
                 if(this['gwbank_name']==name){                
-                    $('#k').append('<table class="table table-bordered table-hover"><tr>' + z +'</tr></table>').css({'margin': '10px'});
+                    $('#k').append('<table class="table table-bordered table-hover"><tr>' + z +'</tr></table>').css({'margin': '20px'});
           
               }//if               
            })//each
