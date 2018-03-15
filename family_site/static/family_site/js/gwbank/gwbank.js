@@ -40,6 +40,7 @@ function chae(name){
                 if(this['gwbank_name']==name){                
                     $('#k').append('<table class="table table-bordered table-hover"><tr>' + z +'</tr></table>').css({'margin': '20px'});
           
+                    return false;
               }//if               
            })//each
           }//if 

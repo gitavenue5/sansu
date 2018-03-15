@@ -3,7 +3,7 @@ from django.views.generic.base import TemplateView
 
 from django.contrib.auth.forms import UserCreationForm
 
-from django.shortcuts import render, get_object_or_404, resolve_url, reverse
+from django.shortcuts import render, get_object_or_404, resolve_url, reverse, redirect
 from django.views.generic import TemplateView, CreateView, ListView, DetailView, UpdateView, DeleteView, FormView
 from django.urls import reverse_lazy
 
@@ -35,7 +35,7 @@ class LoginRequiredMixin(object):
         return login_required(view)
 
 # 날마다
-class DailyCreateView(CreateView):
+class DailyCreateView(LoginRequiredMixin, CreateView):
     model = Daily 
     form_class = DailyForm
     template_name = 'family_site/daily/daily_create.html'
@@ -53,7 +53,7 @@ class DailyDetailView(DetailView):
     template_name = 'family_site/daily/daily_detail.html'    
 
 # 기념일
-class AnniversaryCreateView(CreateView):
+class AnniversaryCreateView(LoginRequiredMixin, CreateView):
     model = Anniversary
     form_class = AnniversaryForm
     template_name = 'family_site/anniversary/anniversary_create.html'
@@ -69,7 +69,7 @@ class GwBankViewSet(viewsets.ModelViewSet):
     queryset = GwBank.objects.all()
     serializer_class = GwBankSerializer
 
-class GwBankCreateView(CreateView):
+class GwBankCreateView(LoginRequiredMixin, CreateView):
     model = GwBank
     template_name = 'family_site/gwbank/gwbank_create.html'    
     form_class = GwBankForm
@@ -85,6 +85,7 @@ class GwBankCreateView(CreateView):
 
     def get_success_url(self):
         return reverse_lazy('family_site:gwbank_list')
+
 
 class GwBankListView(ListView):
     model = GwBank
@@ -110,7 +111,7 @@ class WrBankViewSet(viewsets.ModelViewSet):
     queryset = WrBank.objects.all()
     serializer_class = WrBankSerializer
 
-class WrBankCreateView(CreateView):
+class WrBankCreateView(LoginRequiredMixin, CreateView):
     model = WrBank
     template_name = 'family_site/wrbank/wrbank_create.html'
     #success_url = reverse_lazy('family_site:wrbank_list')

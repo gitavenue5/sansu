@@ -13,6 +13,8 @@ function income(ttt){
                                                             
                     if(this['wrbank_deposit_withdrawal']==ttt){
                         $('#wbl').append('<table class="table table-bordered table-hover"><tr>'+ t + '</tr></table>').css({'margin': '20px'})};
+
+                        return false;
                 })//each
             }//if
         })//json
