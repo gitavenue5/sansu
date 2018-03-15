@@ -44,8 +44,8 @@ class GwBankForm(forms.ModelForm):
 
 # 우리은행
 class WrBankForm(forms.ModelForm):
-    wrbank_date = forms.DateField(widget=extras.SelectDateWidget(),label='날자',help_text="  ")
-    
+    #wrbank_date = forms.DateField(widget=extras.SelectDateWidget(),label='날자',help_text="  ")
+    wrbank_date = forms.DateField(initial=datetime.date.today(), widget=SelectDateWidget(None, range(2014, THIS_YEAR+10)))
     class Meta:
         model = WrBank
         fields = ('wrbank_date', 'wrbank_deposit_withdrawal', 'wrbank_money1', 'wrbank_note', 'wrbank_money2',  'wrbank_money3', 'wrbank_aggregate', 'wrbank_loan_balance', 'wrbank_bankbook_balance', )

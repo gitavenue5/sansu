@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from django_summernote.admin import SummernoteModelAdmin
 
-from . models import Daily, Anniversary, GwBank, Note, NoteComment
+from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment
 
 # Register your models here.
 
@@ -22,6 +22,13 @@ class AnniversaryAdmin(admin.ModelAdmin):
 class GwBankAdmin(admin.ModelAdmin):
     list_display = ('id', 'gwbank_date', 'gwbank_income', 'gwbank_money', 'gwbank_name', 'gwbank_execution', 'gwbank_note', )
     list_display_links = ('id', 'gwbank_date', 'gwbank_name', )
+
+
+# 우리은행
+@admin.register(WrBank)
+class WrBankAdmin(admin.ModelAdmin):
+    list_display = ('id', 'wrbank_date', 'wrbank_deposit_withdrawal', 'wrbank_money1', 'wrbank_note', 'wrbank_money2',  'wrbank_money3', 'wrbank_aggregate', 'wrbank_loan_balance', 'wrbank_bankbook_balance', )
+    list_display_links = ('wrbank_date', 'wrbank_deposit_withdrawal', 'wrbank_money1', 'wrbank_note', 'wrbank_money2',  'wrbank_money3', )
 
 
     # 게시판

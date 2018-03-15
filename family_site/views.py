@@ -113,15 +113,24 @@ class WrBankViewSet(viewsets.ModelViewSet):
 class WrBankCreateView(CreateView):
     model = WrBank
     template_name = 'family_site/wrbank/wrbank_create.html'
-    success_url = reverse_lazy('family_site:wrbank_list')
+    #success_url = reverse_lazy('family_site:wrbank_list')
     form_class = WrBankForm
+
+    def form_valid(self, form):
+        form = form.save(commit=False)
+        form.wrbank_money1 = self.default=0
+        form.save()
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('family_site:wrbank_list')
 
     
 
 class WrBankListView(ListView):
     model = WrBank
     template_name = 'family_site/wrbank/wrbank_list.html'
-    paginate_by = 20
+    paginate_by = 30
 
     def get_queryset(self):        
         return WrBank.objects.all()
@@ -142,6 +151,8 @@ class WrBankListView(ListView):
         
         context['kk'] = WrBank.objects.filter(wrbank_money2__gt=0).count  
         context['kkk'] = WrBank.objects.filter(wrbank_money3__gt=0).count
+
+        
         return context
 
 
