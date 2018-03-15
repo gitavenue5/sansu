@@ -15,9 +15,22 @@
         - 대출이자 + 원금 총액 : {{ deposit_withdrawal|intcomma }}원.
         <br><br>
     </div>
-    <a class='btn btn-default' href='{% url 'family_site:gwbank_list' %}'>광주은행 보기</a>
-
-
+<form>
+    <a class='btn btn-default' href='{% url 'family_site:gwbank_list' %}'>광주은행 보기</a>&nbsp;&nbsp;        
+              
+    <select id='wbls' class='btn btn-default'>
+        <option selected="selected">입출금선택</option>
+        <option onclick="income('입 금')">입 금</option>
+        <option onclick="income('출 금')">출 금</option>    
+        </select>
+    &nbsp;&nbsp;<button id='kkk' class='btn btn-default'>감추기</button>
+</form>
+     
+<div id='wbl'></div>
+    
+    <script>
+        
+    </script>
 
     <div id='wrbank_wrap'>
         <h4 class='wrbank'>우 리 은 행</h4>

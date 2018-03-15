@@ -15,6 +15,7 @@ function comma(num){
 
 // 글 내용 감추기
 function hidden(){
+  
     $(document).ready(function(){
       $('#kkk').click(function(){
         $('#k').css({'display': 'none'});
