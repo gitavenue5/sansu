@@ -2,6 +2,16 @@ table, th, td {
     text-align: center;
 }
 
+#k > ul {
+    list-style: none;
+}
+
+#k > ul > li {
+    /*float: left;*/
+    display: inline;
+    
+    padding: 40px;
+}
 
 .gwbank {
     text-align: center;
