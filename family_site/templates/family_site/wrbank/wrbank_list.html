@@ -18,10 +18,10 @@
 <form>
     <a class='btn btn-default' href='{% url 'family_site:gwbank_list' %}'>광주은행 보기</a>&nbsp;&nbsp;        
               
-    <select id='wbls' class='btn btn-default'>
+    <select id='wbls' class='btn btn-default' onchange="income(this.value)">
         <option selected="selected">입출금선택</option>
-        <option onclick="javascript:income('입 금'); return false">입 금</option>
-        <option onclick="javascript:income('출 금'); return false">출 금</option>    
+        <option value="입금 ; return false">입 금</option>
+        <option value="출금 ; return false">출 금</option>    
         </select>
     &nbsp;&nbsp;<button id='kkk' class='btn btn-default'>감추기</button>
 </form>
