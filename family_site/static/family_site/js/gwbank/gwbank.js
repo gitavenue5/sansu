@@ -27,8 +27,8 @@ function hidden(){
 
 // 셀렉트에서 원하는 사람 데이터 출력하는 함수
 function chae(name){
-    $(document).ready(function(){
-      
+    //$(document).ready(function(){
+      $(document).on("change", function(){
       $.getJSON('/api/gwbank_api', function(data){
         if(data.length>0){
           $('#k').empty();
