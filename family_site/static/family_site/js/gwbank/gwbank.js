@@ -16,7 +16,8 @@ function comma(num){
 // 글 내용 감추기
 function hidden(){
   
-    $(document).ready(function(){
+    $(document).ready(function(event){
+      event.preventDefault(); 
       $('#kkk').click(function(){
         $('#k').css({'display': 'none'});
       })//click          
@@ -27,7 +28,7 @@ function hidden(){
 // 셀렉트에서 원하는 사람 데이터 출력하는 함수
 function chae(name){
     $(document).ready(function(){
-   
+      
       $.getJSON('/api/gwbank_api', function(data){
         if(data.length>0){
           $('#k').empty();
