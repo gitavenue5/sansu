@@ -11,9 +11,9 @@
     <a class='btn btn-default' href='{% url 'family_site:wrbank_list' %}'>우리은행보기</a>
     <select class='btn btn-default' id='s'>
      <option selected="selected">이름 선택</option>
-     <option onclick="javascript:chae('이채순')" ontouchend="javascript:chae('이채순')"; return false>이채순</option>   
+     <option onclick="javascript:chae('이채순')" touchstart="javascript:chae('이채순')"; return false>이채순</option>   
      <option onclick="javascript:chae('이기창')" ontouchend="javascript:chae('이채순')"; return false>이기창</option> 
-     <option onclick="javascript:chae('이화순')" ontouchend="javascript:chae('이채순')"; return false>이화순</option> 
+     <option onclick="javascript:chae('이화순')" ontouchstart="javascript:chae('이채순')"; return false>이화순</option> 
     </select> 
     <button id='kkk' class='btn btn-default'>감추기</button>
   </form>
@@ -47,8 +47,6 @@
             </tbody>
         </table>
     </div>
-    
-    <button id='gwbank_wrap'>눌러보자</button>
   
    
 <div id="gwbank_pagination">
