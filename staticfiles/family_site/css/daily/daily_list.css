@@ -1,0 +1,28 @@
+#daily {
+    border: 1px solid #dddddd;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 14px;
+}
+
+#daily > p:first-child {
+    color: maroon;
+    font-size: 1.1em;
+}
+
+#daily > p > span {
+    font-size: 0.9em;
+    color: black;
+    padding-left: 1px;
+}
+
+#daily > p+p {
+    font-size: 1.1em;
+    color: black;
+}
+
+img {
+    border: 1px solid #000000;
+    padding: 1px;
+}
+
+
