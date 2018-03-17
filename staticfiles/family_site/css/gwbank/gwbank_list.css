@@ -1,0 +1,23 @@
+table, th, td {
+    text-align: center;
+}
+
+#k > ul {
+    list-style-type: square;
+}
+
+#k > ul > li {
+    /*float: left;*/
+    padding: 40px;
+    display: inline;    
+}
+
+.gwbank {
+    text-align: center;
+    font-family: '나눔고딕', 바탕;
+    color: black;
+}
+
+#gwbank_pagination {
+    text-align: center;
+}
