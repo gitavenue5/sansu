@@ -3,14 +3,13 @@ table, th, td {
 }
 
 #k > ul {
-    list-style: none;
+    list-style-type: square;
 }
 
 #k > ul > li {
     /*float: left;*/
-    display: inline;
-    
     padding: 40px;
+    display: inline;    
 }
 
 .gwbank {
