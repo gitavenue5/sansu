@@ -19,3 +19,14 @@
 #loan {
     color: maroon;
 }
+
+
+#wbl > ul {
+    list-style-type: square;
+}
+
+#wbl > ul > li {
+    /*float: left;*/
+    padding: 20px;
+    display: inline;    
+}
