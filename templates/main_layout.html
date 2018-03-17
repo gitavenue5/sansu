@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,  maximum-scale=1.0"/>
 
     <title> {% block title %} Sansu-Memory {% endblock title %} </title>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Miltonian+Tattoo|Permanent+Marker|Risque" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />   
@@ -38,8 +39,7 @@
                     <span class='welcome'><a class='btn btn-default' href='{% url 'login' %}'>로그인</a>&nbsp;&nbsp;<a class='btn btn-default' href='{% url 'register' %}'>회원가입</a></span>
                 {% endif %}
             </li>       
-        </ul>        
-                
+        </ul>                        
     </div><!-- nav-container-fluid end-->    
 
     <div class="container-fluid">
@@ -47,13 +47,15 @@
             <div class="col-xs-12">
                 <h4 class="alert alert-success" role="alert">Sansu-Memory &nbsp;&nbsp;{% now 'Y.m.d' %}</h4>
                
-                {% block content1 %}
-        
+                
+                <div data-role='content'>
+                {% block content1 %}        
                 <div class="jumbotron">
                         <h2>Sansu-Memory!</h2>
                         <p style='border-left:5px solid gray; padding-left:20px;'></p>
                       </div>
                 {% endblock content1 %}
+            </div>
 
             </div><!-- col-xs-12 end -->
         </div><!-- row end -->

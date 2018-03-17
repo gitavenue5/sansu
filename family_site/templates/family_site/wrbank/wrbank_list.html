@@ -12,57 +12,54 @@
     <div id='loan'>
         - 대출이자 회차 : {{ kk }}차, &nbsp; &nbsp;  - 대출이자 총액 : {{ interest|intcomma }}원.<br>
         - 원금 회자 : {{ kkk }}차, &nbsp; &nbsp; - 원금 총액 : {{ principal|intcomma }}원.<br>
-        - 대출이자 + 원금 총액 : {{ deposit_withdrawal|intcomma }}원.
+        - 대출이자 + 원금 총액 : {{ deposit_wilidrawal|intcomma }}원.
         <br><br>
     </div>
 <form>
-    <a class='btn btn-default' href='{% url 'family_site:gwbank_list' %}'>광주은행 보기</a>&nbsp;&nbsp;        
-              
-    <select id='wbls' class='btn btn-default'>
+    <a class='btn btn-default' href='{% url 'family_site:gwbank_list' %}'>광주은행 보기</a>&nbsp;&nbsp;                 
+    <select id='wbls' class='btn btn-default' onchange='income(this.value)' data-native-menu='false'>
         <option selected="selected">입출금선택</option>
-        <option onclick="javascript:income('입 금'); return false">입 금</option>
-        <option onclick="javascript:income('출 금'); return false">출 금</option>    
-        </select>
-    &nbsp;&nbsp;<button id='kkk' class='btn btn-default'>감추기</button>
+        <option value="입 금">입 금</option>
+        <option value="출 금">출 금</option>    
+    </select>
+    &nbsp;&nbsp;<button id='kkk' class='btn btn-default' onclick="hidden();return false">감추기</button>
 </form>
      
 <div id='wbl'></div>
-    
-    <script>
-        
-    </script>
-
-    <div id='wrbank_wrap'>
-        <h4 class='wrbank'>우 리 은 행</h4>
-        <table class='table table-bordered table-hover' id='aa'>
-            <thead>
-                <tr>
-                    <th>날 자</th>
-                    <th>입＊출금</th>
-                    <th>금 액</th>
-                    <th>비 고</th>
-                    <th>대출 이자</th>
-                    <th>대출 원금</th>
-                    <th>이자 + 원금</th>
-                    <th>대출잔액</th>
-                    <th>통장잔액</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>{% for i in object_list %}
-                    <td>{{ i.wrbank_date|date:'Y-m-d' }}</td>
-                    <td>{{ i.wrbank_deposit_withdrawal }}</td>
-                    <td>{{ i.wrbank_money1|intcomma }}</td>
-                    <td>{{ i.wrbank_note }}</td>
-                    <td>{{ i.wrbank_money2|intcomma }}</td>
-                    <td>{{ i.wrbank_money3|intcomma }}</td>
-                    <td>{{ i.wrbank_aggregate|intcomma }}</td>
-                    <td>{{ i.wrbank_loan_balance|intcomma }}</td>
-                    <td>{{ i.wrbank_bankbook_balance|intcomma }}</td>  
-                                      
-                </tr>{% endfor %}         
-            </tbody>
-        </table>
+             
+        <div id='wrbank_wrap'>
+            <h4 class='wrbank'>우 리 은 행</h4>
+            <table class='table table-bordered table-hover' id='aa'>
+                <thead>
+                    <tr>
+                        <th>날 자</th>
+                        <th>입＊출금</th>
+                        <th>금 액</th>
+                        <th>비 고</th>
+                        <th>대출 이자</th>
+                        <th>대출 원금</th>
+                        <th>이자 + 원금</th>
+                        <th>대출잔액</th>
+                        <th>통장잔액</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>{% for i in object_list %}
+                        <td>{{ i.wrbank_date|date:'Y-m-d' }}</td>
+                        <td>{{ i.wrbank_deposit_withdrawal }}</td>
+                        <td>{{ i.wrbank_money1|intcomma }}</td>
+                        <td>{{ i.wrbank_note }}</td>
+                        <td>{{ i.wrbank_money2|intcomma }}</td>
+                        <td>{{ i.wrbank_money3|intcomma }}</td>
+                        <td>{{ i.wrbank_aggregate|intcomma }}</td>
+                        <td>{{ i.wrbank_loan_balance|intcomma }}</td>
+                        <td>{{ i.wrbank_bankbook_balance|intcomma }}</td>  
+                                          
+                    </tr>{% endfor %}         
+                </tbody>
+            </table>
+        </div>       
+            
     </div>
 
 

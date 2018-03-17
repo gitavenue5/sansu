@@ -1,0 +1,45 @@
+#title {
+    color: black;
+    font-family: '고딕', 나눔고딕, 바탕, 바탕체;
+  
+
+}
+
+#note_detail  > p:nth-child(2) {
+    border-left: 1px solid maroon;
+    padding-left: 10px;
+
+}
+
+#note_detail > p:nth-child(2) > span {
+    font-size: 0.8em;
+    padding-left: 10px;
+
+}
+
+#comments_count {
+    font-size: 0.8em;
+    color: gray;
+    padding-bottom: 20px;
+}
+
+#comment > ul {
+    border-top: 1px solid #E6E6E6;
+    padding-top: 14px;
+}
+#comment > ul > li {
+    list-style-type: none;
+    color: gray;
+}
+
+#comment > ul > li > span {
+    padding-left: 20px;
+    font-size: 0.9em;    
+}
+
+#comment > ul > li+li {
+    padding-top: 10px;
+    padding-bottom: 14px;       
+    line-height: 2.0em;
+    color: black;
+}
