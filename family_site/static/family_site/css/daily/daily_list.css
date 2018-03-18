@@ -23,6 +23,7 @@
 
 
 img {
+    display: block;
     border: 1px solid #000000;
     padding: 1px;
     max-width: 98%;
