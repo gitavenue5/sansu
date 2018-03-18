@@ -12,9 +12,10 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Miltonian+Tattoo|Permanent+Marker|Risque" />
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />   
+     
         
     <link rel="stylesheet" type="text/css" href="{% static 'css/main_layout.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% block stylesheet %}  {% endblock stylesheet %}" />  
@@ -77,8 +78,7 @@
         </div><!-- row end -->
     </div><!-- class  container end-->
 
-</div><!-- 전체페이지 base_page_wrap end -->
-</div>
+
     {% block footer %}
     {% endblock footer %}
 
@@ -88,5 +88,7 @@
     <br><br><br><br><br><br>
 <script src="{% static 'family_site/js/gwbank/gwbank.js' %}"></script>
 <script src="{% static 'family_site/js/wrbank/wrbank.js' %}"></script>
+</div><!-- 전체페이지 base_page_wrap end -->
+</div> <!-- data-role="page" -->
 </body>
 </html>

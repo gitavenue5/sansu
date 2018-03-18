@@ -15,6 +15,7 @@
         - 대출이자 + 원금 총액 : {{ deposit_wilidrawal|intcomma }}원.
         <br><br>
     </div>
+<div data-role='content'
 <form>
     <a class='btn btn-default' href='{% url 'family_site:gwbank_list' %}'>광주은행 보기</a>&nbsp;&nbsp;                 
     <select id='wbls' class='btn btn-default' onchange='income(this.value)' data-native-menu='false'>
@@ -24,7 +25,8 @@
     </select>
     &nbsp;&nbsp;<button id='kkk' class='btn btn-default' onclick="hidden();return false">감추기</button>
 </form>
-     
+</div>
+
 <table id='wb' class='table table-bordered table-hover'>
     <thead>
         

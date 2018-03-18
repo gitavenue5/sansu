@@ -7,6 +7,7 @@
 
 <p>이채순 계 : {{ chaesun|intcomma }}원, &nbsp; 이기창 계 : {{ gichang|intcomma }}원, &nbsp; 이화순 계 : {{ hwasun|intcomma }}원.</p> 
 <br>
+<div data-role='content'
 <form>
     <a class='btn btn-default' href='{% url 'family_site:wrbank_list' %}'>우리은행보기</a>
     <select class='btn btn-default' id='s' onchange='chae(this.value)' data-native-menu='false'>
@@ -17,6 +18,7 @@
     </select> 
     <button id='kkk' class='btn btn-default' onclick="hidden();return false">감추기</button>
   </form>
+  </div>
  
  <div>
   <table id='k' class='table table-bordered table-hover'></table>
