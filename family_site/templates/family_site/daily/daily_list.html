@@ -6,8 +6,12 @@
 
 {% for i in object_list%}
 <div id='daily'>
-    <span>{{ i.daily_date|date:'Y-m-d' }}</span> <span>({{ i.daily_day }})</span>
-   <span>{{ i.daily_content|safe }}</span>
+    <ul>
+        <li><span>{{ i.daily_date|date:'Y-m-d' }}</span> <span>({{ i.daily_day }})</span></li>
+        <li><span>{{ i.daily_content|safe }}</span></li>
+    </ul>
+    
+   
 </div>
 {% endfor %}
 
