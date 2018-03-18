@@ -6,8 +6,8 @@
 
 {% for i in object_list%}
 <div id='daily'>
-    {{ i.daily_date|date:'Y-m-d' }} <span>({{ i.daily_day }})</span>
-    {{ i.daily_content|safe }}
+    <span>{{ i.daily_date|date:'Y-m-d' }}</span> <span>({{ i.daily_day }})</span>
+   <span>{{ i.daily_content|safe }}</span>
 </div>
 {% endfor %}
 

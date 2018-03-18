@@ -4,21 +4,23 @@
     margin-bottom: 14px;
 }
 
-#daily > p:first-child {
-    color: maroon;
-    font-size: 1.1em;
-}
+/*#daily > span:first-child {    
+}*/
 
-#daily > p > span {
+#daily > span+span {
     font-size: 0.9em;
-    color: black;
+    color: gray;
     padding-left: 1px;
 }
 
-#daily > p+p {
-    font-size: 1.1em;
+#daily span+span+span {
+    font-size: 0.9em;
     color: black;
+    padding-top: 10px;
+  
+    display: block;
 }
+
 
 img {
     border: 1px solid #000000;

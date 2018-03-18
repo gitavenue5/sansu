@@ -1,20 +1,31 @@
+function com(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+
+
 function income(ttt){
     $(document).ready(function(){
         $.getJSON('/api/wrbank_api', function(data){
-
-            if(data.length>0){
-                //$('#wbl').empty();
             
+            if(data.length>0){
+                $('#wb').empty();
+               
                 $.each(data, function(){
-                    var t = '<li>'+ this['wrbank_date'] + '</li><li>' 
-                        + this['wrbank_deposit_withdrawal'] + '</li><li>' + comma(this['wrbank_money1']) + '</li><li style="width:200px;">' + this['wrbank_note']
-                            + '</li><li>' + comma(this['wrbank_money2']) + '</li><li>' + comma(this['wrbank_money3']) + '</li><li>' 
-                                + comma(this['wrbank_aggregate']) + '</li><li>' + comma(this['wrbank_loan_balance']) + '</li><li>' + comma(this['wrbank_bankbook_balance']) + '</li>' ; 
-                          
-             
-                    if(this['wrbank_deposit_withdrawal']==ttt){
-                        $('#wbl').append('<p><ul>' + t +'</ul></p>').css({'margin': '20px'});  
-                        
+                    
+                     t = '<tbody><tr><td>'+ this['wrbank_date'] + '</td><td>' 
+                        + this['wrbank_deposit_withdrawal'] + '</td><td>' + com(this['wrbank_money1']) + '</td><td style="width:200px;">' + this['wrbank_note']
+                            + '</td><td>' + com(this['wrbank_money2']) + '</td><td>' + com(this['wrbank_money3']) + '</td><td>' 
+                                + com(this['wrbank_aggregate']) + '</td><td>' + 
+                                com(this['wrbank_loan_balance']) + '</td><td>' + 
+                                com(this['wrbank_bankbook_balance']) + '</td></tr></tbody>';
+                              
+                   //var u = '<thead><tr><th>날 자</th><th>입출금</th><th>금 액</th><th>비 고</th><th>대출이자</th><th>대출원금</th><th>이자+원금</th><th>대출잔액</th><th>통장잔액</th></tr></thead>';
+                   
+                   if(this['wrbank_deposit_withdrawal']==ttt){  
+                                                
+                        $("table").append(t).css({'margin-top': '20px','margin-bottom': '20px'});  
+                  
                     };//if                       
                 })//each
             }//if
@@ -23,11 +34,4 @@ function income(ttt){
 };//income
 
 
-function head(item){
-    header = '<tr>';
-    for(key in item){
-        header += '<th>' + key + '</th>';        
-    }
-    header += '</tr>'
-    return header;
-};
+
