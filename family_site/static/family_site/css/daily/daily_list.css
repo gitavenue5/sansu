@@ -26,11 +26,12 @@
 
 img {
     display: block;
+    max-width: 98%;
+    max-height: 98%;
+    position: relative;
+    overflow: hidden;
     border: 1px solid #000000;
     padding: 1px;
-    max-width: 98%;
-    width: auto;
-    height: auto;
 }
 
 
