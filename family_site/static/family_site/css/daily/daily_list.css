@@ -3,6 +3,7 @@
     padding: 10px 10px 10px 20px;
     margin-bottom: 14px;
     display: block;
+    overflow: auto;
 }
 
 /*#daily > span:first-child {    
@@ -19,7 +20,7 @@
     color: black;
     padding-top: 10px;  
     display: block;
-    overflow: auto;
+    
 }
 
 
