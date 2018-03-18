@@ -29,7 +29,8 @@ img {
     border: 1px solid #000000;
     padding: 1px;
     max-width: 98%;
-    max-height: 98%;
+    width: auto;
+    height: auto;
 }
 
 
