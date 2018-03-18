@@ -2,6 +2,7 @@
     border: 1px solid #dddddd;
     padding: 10px 10px 10px 20px;
     margin-bottom: 14px;
+    display: block;
 }
 
 /*#daily > span:first-child {    
@@ -16,8 +17,7 @@
 #daily span+span+span {
     font-size: 0.9em;
     color: black;
-    padding-top: 10px;
-  
+    padding-top: 10px;  
     display: block;
 }
 
