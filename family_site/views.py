@@ -90,7 +90,7 @@ class GwBankCreateView(LoginRequiredMixin, CreateView):
 class GwBankListView(ListView):
     model = GwBank
     template_name = 'family_site/gwbank/gwbank_list.html'
-    paginate_by = 20
+    paginate_by = 30
 
     def get_queryset(self):
         return GwBank.objects.all()
