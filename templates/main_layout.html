@@ -12,12 +12,13 @@
     
     
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Miltonian+Tattoo|Permanent+Marker|Risque" />
-     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    
         
     <link rel="stylesheet" type="text/css" href="{% static 'css/main_layout.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% block stylesheet %}  {% endblock stylesheet %}" />  
@@ -25,7 +26,7 @@
 
 </head>
 <body>
-    <div data-role="page">
+<div data-role="padt">
 <div id="base_page_wrap"><!-- 전체페이지 wrapper 시작 div -->
 
     <div class="container-fluid" id="nav">
@@ -51,14 +52,16 @@
                 <h4 class="alert alert-success" role="alert">Sansu-Memory &nbsp;&nbsp;{% now 'Y.m.d' %}</h4>
                
                 
-               
+               <div data-role='content'>
                 {% block content1 %}        
-                <div class="jumbotron">
-                        <h2>Sansu-Memory!</h2>
-                        <p style='border-left:5px solid gray; padding-left:20px;'></p>
-                      </div>
+                
+                <div id='note'>                                               
+                    <p>- 2017.08.29일(화) 광주시립제2요양병원에 입원 하신지 <span>{{ convalescentHospital_3.days }}</span> 일째 입니다.</p>
+                    <p>- 2018.05.11일(금요일, 10시) 전대병원 안과 예약 (3동 2층, 성미선 교수) : <span>{{ op_3.days }}</span>일 남았습니다.</p>                                    
+                </div>
+                    
                 {% endblock content1 %}
-            
+            </div>
 
             </div><!-- col-xs-12 end -->
         </div><!-- row end -->
@@ -86,11 +89,12 @@
 
     {% block script %}
     {% endblock script %}
-
+</div><!-- 전체페이지 base_page_wrap end -->
+</div> <!-- data-role="padt: -->
     <br><br><br><br><br><br>
 <script src="{% static 'family_site/js/gwbank/gwbank.js' %}"></script>
 <script src="{% static 'family_site/js/wrbank/wrbank.js' %}"></script>
-</div><!-- 전체페이지 base_page_wrap end -->
-</div> <!-- data-role="page" -->
+
+
 </body>
 </html>

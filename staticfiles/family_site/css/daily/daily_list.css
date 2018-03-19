@@ -2,29 +2,40 @@
     border: 1px solid #dddddd;
     padding: 10px 10px 10px 20px;
     margin-bottom: 14px;
+    display: block;
+    overflow: auto;
 }
 
 /*#daily > span:first-child {    
 }*/
 
-#daily > span+span {
+#daily > ul {
+    list-style: none;
+}
+
+#daily > ul > li:first-child > span+span {
     font-size: 0.9em;
     color: gray;
     padding-left: 1px;
 }
 
-#daily span+span+span {
+#daily ul> li:nth-child(2) > span {
     font-size: 0.9em;
     color: black;
-    padding-top: 10px;
-  
-    display: block;
+    padding-top: 10px;  
+    display: block; 
 }
 
-
 img {
+    display: block;
+    max-width: 98%;
+    max-height: 98%;
+    position: relative;
+    overflow: hidden;
     border: 1px solid #000000;
     padding: 1px;
 }
+
+
 
 
