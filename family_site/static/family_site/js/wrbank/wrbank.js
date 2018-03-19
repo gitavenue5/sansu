@@ -2,6 +2,14 @@ function com(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+// 글 내용 감추기
+function hidden(){  
+    $(document).ready(function(){      
+      $('#kkk').click(function(){
+        $('#k').css({'display': 'none'});
+      })//ctdck          
+    });//ready function end
+}//hidden function end
 
 
 function income(ttt){
