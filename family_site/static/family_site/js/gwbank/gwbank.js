@@ -14,6 +14,13 @@ function hidden(){
 }//hidden function end
 
 
+// chae(this.value) 셀렉터 함수
+$(function(){
+  $('#s').on('change', function(){
+    chae(this.value);
+  });//on
+})//function
+
 // 셀렉트에서 원하는 사람 데이터 출력하는 함수
 function chae(name){
     $(document).ready(function(){

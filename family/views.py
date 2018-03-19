@@ -14,19 +14,22 @@ class SansuTemplateView(TemplateView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         
+       # 요양병원 입원일수 아래것이 단순함.
+        #convalescentHospital_1 = datetime(2017,8,29)
+        #convalescentHospital_2 = datetime.now()
+        #context['convalescentHospital_3'] = convalescentHospital_2 - convalescentHospital_1
+
+        convalescentHospital_1 = date(2017,8,29)
+        convalescentHospital_2 = date.today()
+        context['convalescentHospital_3'] = convalescentHospital_2 - convalescentHospital_1
+       
        # 병원 진료 예약일
        # 안과
         op_1 = datetime(2018,5,11)
         op_2 = datetime.now()        
         context['op_3'] = op_1 - op_2   
 
-        
-        # 요양병원 입원일수
-        convalescentHospital_1 = datetime(2017,8,29)
-        convalescentHospital_2 = datetime.now()
-        context['convalescentHospital_3'] = convalescentHospital_2 - convalescentHospital_1
-
-
+       
         return context
 
     

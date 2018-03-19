@@ -12,18 +12,12 @@
                 <h2>로그인</h2>
             </div>
     
-            <form action='' method='post'>
-                {% csrf_token %}  
-                {{ form|crispy }}                 
-            
+            <form action='' method='post'>{% csrf_token %}  
+                {{ form|crispy }}              
                 <input class="btn btn-primary" type="submit" value="로그인" />   
                 <input type='hidden' name='next' value="{{ next }}" />                 
             </form>
-            <div>
-                <script type='text/javascript'>
-                    document.getElementById('id_username').focus();
-                </script>
-            </div>
+            
         </div>
     </div>
 </div>

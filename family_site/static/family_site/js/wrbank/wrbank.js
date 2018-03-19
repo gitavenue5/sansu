@@ -12,6 +12,16 @@ function hidden(){
 }//hidden function end
 
 
+
+// income(this.value) 셀렉터 함수
+$(function(){
+    $('#wbls').on('change', function(){
+      income(this.value);
+    });//on
+  })//function
+
+
+
 function income(ttt){
     $(document).ready(function(){
         $.getJSON('/api/wrbank_api', function(data){
