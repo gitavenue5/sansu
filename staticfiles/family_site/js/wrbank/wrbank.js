@@ -2,6 +2,24 @@ function com(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+// 글 내용 감추기
+function hidden(){  
+    $(document).ready(function(){      
+      $('#kkk').click(function(){
+        $('#k').css({'display': 'none'});
+      })//ctdck          
+    });//ready function end
+}//hidden function end
+
+
+
+// income(this.value) 셀렉터 함수
+$(function(){
+    $('#wbls').on('change', function(){
+      income(this.value);
+    });//on
+  })//function
+
 
 
 function income(ttt){
