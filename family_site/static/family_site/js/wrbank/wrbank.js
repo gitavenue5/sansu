@@ -2,14 +2,6 @@ function com(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
-// 글 내용 감추기
-function wrhidden(){
-    $(document).ready(function(){
-      $('#kk').click(function(){
-        $('#wb').css({'display': 'none'});
-      });//ctdck
-    });//ready function end
-};//hidden function end
 
 $(function(){
     $('#kk').click(function(){
