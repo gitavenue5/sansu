@@ -10,19 +10,14 @@
 
 <form>
     <a class='btn btn-default' href='{% url 'family_site:wrbank_list' %}'>우리은행보기</a>
-    <select class='btn btn-default' id='s' data-native-menu='false'>
+    <select class='btn btn-default' id='s' data-native-menu='false' change(this.value)>
      <option selected="selected">이름 선택</option>
      <option value='이채순'>이채순</option>   
      <option value='이기창'>이기창</option>
      <option value='이화순'>이화순</option> 
     </select> 
-    <button id='kkk' class='btn btn-default' onclick="hidden()">감추기</button>
-  </form>
-<script>
-  
-  
-
-</script>
+    <button id='kkk' class='btn btn-default'>감추기</button>
+</form>
  
  <div>
   <table id='k' class='table table-bordered table-hover'></table>
