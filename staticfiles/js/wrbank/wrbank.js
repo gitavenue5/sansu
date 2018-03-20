@@ -18,7 +18,7 @@ $(function(){
     $('#wbls').on('change', function(){
       income(this.value);
     });//on
-  })//function
+  });//function
 
 
 
