@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>    
 
+   
 </head>
 
 <body>
@@ -46,9 +47,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <h4 class="alert alert-success" role="alert">Sansu-Memory &nbsp;&nbsp;{% now 'Y.m.d' %}</h4>
-               
-                
-               <div data-role='content'>
+                          
                 {% block content1 %}        
                 
                 <div id='note'>                                               
@@ -57,10 +56,10 @@
                          &nbsp;&nbsp;- 2018.05.11일(금요일, 10시) 전대병원 안과 예약(3동 2층, 성미선 교수) : <span>{{ op_3.days }}</span>일 남았습니다.
                     </p>    
                     <p>{{ c.days }}</p>                                
+             
                 </div>
-                    
                 {% endblock content1 %}
-            </div>
+            
 
             </div><!-- col-xs-12 end -->
         </div><!-- row end -->
@@ -89,12 +88,12 @@
     {% block script %}
     {% endblock script %}
 </div><!-- 전체페이지 base_page_wrap end -->
-</div> <!-- data-role="padt: -->
+</div> <!-- data-role="page: -->
     <br><br><br><br><br><br>
 <script src="{% static 'family_site/js/gwbank/gwbank.js' %}"></script>
 <script src="{% static 'family_site/js/wrbank/wrbank.js' %}"></script>
 
-
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
 
