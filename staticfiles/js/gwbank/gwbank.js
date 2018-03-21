@@ -1,22 +1,25 @@
     // 세자리 수 콤마
     function com(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    };
+    }
     
 
+// 글 내용 감추기
+function hidden(){  
+    $(document).ready(function(){      
+      $('#kkk').click(function(){
+        $('#k').css({'display': 'none'});
+      })//ctdck          
+    });//ready function end
+}//hidden function end
 
-$(function(){
-  $('#kkk').click(function(){
-    $('#k').css({'display': 'none'});
-  });
-});
 
 // chae(this.value) 셀렉터 함수
 $(function(){
   $('#s').on('change', function(){
     chae(this.value);
   });//on
-});//function
+})//function
 
 // 셀렉트에서 원하는 사람 데이터 출력하는 함수
 function chae(name){
@@ -33,10 +36,10 @@ function chae(name){
              
                 if(this['gwbank_name']==name){                
                     $("#k").append(z).css({'margin-top': '20px','margin-bottom': '20px'});        
-                   
-                };//if               
-            });//each
-            };//if 
-        });//getjson
-      });//ready
-    };//chae 
+                      
+                }//if               
+            })//each
+            }//if 
+        })//getjson
+      })//ready
+    }//chae 
