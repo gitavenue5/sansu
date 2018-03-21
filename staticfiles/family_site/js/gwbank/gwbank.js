@@ -3,7 +3,6 @@
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
     
-
 // chae(this.value) 셀렉터 함수
 $(function(){ 
   $('#s').on('change', function(){
