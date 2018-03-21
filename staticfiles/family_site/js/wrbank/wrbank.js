@@ -38,8 +38,7 @@ function income(ttt){
 
                    if(this['wrbank_deposit_withdrawal']==ttt){
 
-                        $("table").append(t).css({'margin-top': '20px','margin-bottom': '20px'});
-
+                        $("#wb").append(t).css({'margin-top': '20px','margin-bottom': '20px'});
                     };//if
                 });//each
             };//if
