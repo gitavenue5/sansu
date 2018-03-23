@@ -3,12 +3,11 @@
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
     
-// chae(this.value) 셀렉터 함수
-$(function(){ 
-  $('#s').on('change', function(){
-    chae(this.value);
-  });//
-});//function
+
+
+$('#s').on('click', function(){
+  chae(this.value);
+})
 
 // 셀렉트에서 원하는 사람 데이터 출력하는 함수
 function chae(name){
