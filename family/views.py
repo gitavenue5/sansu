@@ -29,6 +29,10 @@ class SansuTemplateView(TemplateView):
         op_2 = datetime.now()        
         context['op_3'] = op_1 - op_2   
 
+        # test
+        t1 = date(2018,3,24)
+        t2 = date.today()
+        context['t3'] = t1 - t2
        
         return context
 

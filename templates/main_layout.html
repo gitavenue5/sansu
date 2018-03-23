@@ -15,15 +15,10 @@
     
     <link rel="stylesheet" type="text/css" href="{% static 'css/main_layout.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% block stylesheet %}  {% endblock stylesheet %}" />
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    
-    
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>    
 
-     
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            
 </head>
 
 <body>
@@ -56,11 +51,17 @@
                 
                 <div id='note'>                                               
                     <p>- 2017.08.29일(화) 어머님 광주시립제2요양병원에 입원 하신지 <span>{{ convalescentHospital_3.days }}</span> 일째 입니다.</p>
-                    <p>- 진료예약<br>
-                         &nbsp;&nbsp;- 2018.05.11일(금요일, 10시) 전대병원 안과 예약(3동 2층, 성미선 교수) : <span>{{ op_3.days }}</span>일 남았습니다.
+                    <p >- 진료예약<br>
+                         &nbsp;&nbsp;- 2018.05.11일(금요일, 10시) 전대병원 안과 예약(3동 2층, 성미선 교수) : <span id='uuu'>{{ op_3.days }}</span>일 남았습니다.
                     </p>    
-                    <p>{{ c.days }}</p>                                
-             
+                    
+                        <script>
+                            var a = "{{t3}}";
+                            if("{{t2}}" > "{{t1}}"){
+                                $('#uuu').empty().
+                            };//if
+                        </script>
+                    </p>           
                 </div>
                 {% endblock content1 %}
             
@@ -77,7 +78,13 @@
 
 
     {% block content2 %}
-
+    <button id='qq'>눌러봐</button>
+    <script>
+        $('#qq').on('click', function(){
+            c();
+        });
+    </script>
+<div id='kkkk'></div>
     {% endblock content2 %}
      
             
