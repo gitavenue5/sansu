@@ -11,7 +11,7 @@ $(function(){
 
 // income(this.value) 셀렉터 함수
 $(function(){
-    $('#wbls').on('change', function(){
+    $('#wbls').on('change',  function(){
       income(this.value);
     });//on
   });//function
@@ -45,3 +45,10 @@ function income(ttt){
         });//json
     });//ready
 };//income
+
+// 숨기기 버튼
+$(function(){
+    $('#kkk').on('click', function(){
+      $('#k').hide();
+    });
+  });
