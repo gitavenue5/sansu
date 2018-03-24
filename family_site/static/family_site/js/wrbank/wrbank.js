@@ -20,6 +20,7 @@ $(function(){
 
 function income(ttt){
     $(document).ready(function(){
+        crossDomain: true,
         $.getJSON('/api/wrbank_api', function(data){
 
             if(data.length>0){
