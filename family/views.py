@@ -5,6 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.urlresolvers import reverse_lazy
 
 from datetime import datetime, date
+import re
     
 # 처음페이지 함수
 class SansuTemplateView(TemplateView):
@@ -25,14 +26,23 @@ class SansuTemplateView(TemplateView):
        
        # 병원 진료 예약일
        # 안과
-        op_1 = datetime(2018,5,11)
-        op_2 = datetime.now()        
-        context['op_3'] = op_1 - op_2   
+        op_1 = date(2018,5,11)
+        op_2 = date.today()   
+
+        
+        
+        op_3 = op_1 - op_2
+        op_4 = op_2 - op_1
+       
+        context['op_3'] = op_3  # 남았습니다.
+        context['op_4'] = op_4   # 지났습니다.
 
         # test
-        t1 = date(2018,3,24)
-        t2 = date.today()
-        context['t3'] = t1 - t2
+        t1 = datetime(2018,2,27)
+        t2 = datetime.now()
+        context['t3'] = t1 -t2 #남았습니다.
+        context['t4'] = t2 - t1 # 지났습니다.       
+        
        
         return context
 
