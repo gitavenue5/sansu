@@ -49,8 +49,11 @@
                           
                 {% block content1 %}        
              
-                <div id='note'>                                               
+                <div id='note'>   
+                    <p>- 2017.06월26일(월) ~ 2017.08.28(월) 어머님 전대병원 입원기간은 <span>{{ cnuh_3.days }}</span>일 입니다.</p>                                            
                     <p>- 2017.08.29일(화) 어머님 광주시립제2요양병원에 입원 하신지 <span>{{ convalescentHospital_3.days }}</span> 일째 입니다.</p>
+                    <p>- 총 입원일은(웨스웰 1일 포함) <span>{{ hospitalization.days }}</span>일째 입니다.</p><br>
+
                     <p id='pp'>- 진료예약<br>
                          &nbsp;&nbsp;- 2018.05.11일(금요일, 10시) 전대병원 안과 예약(3동 2층, 성미선 교수) :
                          <span style="color:green"> {{ op_3.days }} </span>일이 남았습니다;                                      
