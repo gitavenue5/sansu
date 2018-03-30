@@ -58,7 +58,15 @@
 
                     <p id='pp'>- 진료예약<br>
                          &nbsp;&nbsp;- 2018.05.11일(금요일, 10시) 전대병원 안과 예약(3동 2층, 성미선 교수) :
-                         <span style="color:green"> {{ op_3.days }} </span>일이 남았습니다.                              
+                         
+                            {% if op_1 > op_2 %}
+                                <span style="color:green"> {{ op_3.days }}</span>일 남았습니다.
+                            {% elif op_1 == op_2 %}
+                            <span style="color:green">오늘은 진료일입니다!</span>
+                            {% else %}
+                                <span style="color:green"> {{ op_4.days }}</span>일 지났습니다.
+                            {% endif %}
+                                                     
                     </p>                     
                   
                 

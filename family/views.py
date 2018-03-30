@@ -42,13 +42,13 @@ class SansuTemplateView(TemplateView):
        # 병원 진료 예약일
        # 안과
         op_1 = date(2018,5,11)
-        op_2 = date.today()   
-
-        
+        op_2 = date.today()           
         
         op_3 = op_1 - op_2
         op_4 = op_2 - op_1
-       
+
+        context['op_1'] = op_1
+        context['op_2'] = op_2
         context['op_3'] = op_3  # 남았습니다.
         context['op_4'] = op_4   # 지났습니다.
 
