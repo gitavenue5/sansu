@@ -12,9 +12,9 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
 
-from django.db.models import Q
+from datetime import date, datetime, timedelta
 
-from django.db.models import F, Sum, Count, Case, When
+from django.db.models import Q, F, Sum, Count, Case, When
 
 #from django.contrib.auth.models import User
 from rest_framework import viewsets
@@ -63,6 +63,10 @@ class AnniversaryListView(ListView):
     model = Anniversary
     template_name = 'family_site/anniversary/anniversary_list.html'
 
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['a'] = date(2018,10,18)
+        return context
 
 # 광주은행
 class GwBankViewSet(viewsets.ModelViewSet):
