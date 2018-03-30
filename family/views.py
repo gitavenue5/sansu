@@ -21,6 +21,7 @@ class SansuTemplateView(TemplateView):
         cnuh_3 = cnuh_2 - cnuh_1
         # 입원기간
         context['cnuh_3'] = cnuh_2 - cnuh_1
+        context['cnuh_1'] = cnuh_1
         
        # 요양병원 입원일수 아래것이 단순함.
         #convalescentHospital_1 = datetime(2017,8,29)
@@ -30,10 +31,13 @@ class SansuTemplateView(TemplateView):
         convalescentHospital_1 = date(2017,8,29)
         convalescentHospital_2 = date.today()
         convalescentHospital_3 = convalescentHospital_2 - convalescentHospital_1
+        # 입원기간
         context['convalescentHospital_3'] = convalescentHospital_2 - convalescentHospital_1
+        # 몇개월 전
+        context['convalescentHospital_1'] = convalescentHospital_1
 
         # 총 입원일
-        context['hospitalization'] = (cnuh_3 + convalescentHospital_3) + timedelta(days=1)
+        context['hospitalization'] = (cnuh_3 + convalescentHospital_3).days + 1     # timedelt(days=1) 를 사용할때 .days + 1 를 대신해서 사용
        
        # 병원 진료 예약일
        # 안과
@@ -52,9 +56,11 @@ class SansuTemplateView(TemplateView):
         t1 = datetime(2018,2,27)
         t2 = datetime.now()
         context['t3'] = t1 -t2 #남았습니다.
-        context['t4'] = t2 - t1 # 지났습니다.       
+        context['t4'] = t2 - t1 # 지났습니다.    
+
+        a=date(2015,3,11)  
         
-       
+        context['a'] = a
         return context
 
     
