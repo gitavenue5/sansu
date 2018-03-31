@@ -65,7 +65,13 @@ class AnniversaryListView(ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        context['a'] = date(2018,10,18)
+        anni = date(2018,3,31)
+       
+        #anniver = anni.strftime('%Y-%m-%d') 이렇게 문자열화 하면 에러난다
+        context['a'] = anni
+        b = date.today()
+        
+        context['c'] = b
         return context
 
 # 광주은행

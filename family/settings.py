@@ -53,11 +53,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    
-
-    
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',    
 ]
 
 ROOT_URLCONF = 'family.urls'
@@ -136,6 +132,14 @@ USE_TZ = True
   #  'PAGINATE_BY': 10,
    # 'PAGE_SIZE': 10
 #}
+
+REST_FRAMEWORK = {
+        'DEFAULT_RENDERER_CLASSES' : (
+            'rest_framework.renderers.JSONRenderer',
+            'rest_framework.renderers.TemplateHTMLRenderer',
+        )
+    }
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
