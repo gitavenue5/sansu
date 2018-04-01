@@ -61,6 +61,12 @@ class SansuTemplateView(TemplateView):
         a=date(2015,3,11)  
         
         context['a'] = a
+
+        # 기념일 
+        anni = date(2018,1,10)
+        ann = date(2018,1,10)
+        context['anni'] = anni
+        context['ann'] = ann
         return context
 
     

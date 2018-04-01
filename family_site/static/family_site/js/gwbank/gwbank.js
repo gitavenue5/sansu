@@ -23,7 +23,7 @@ function chae(name){
               var z = '<tbody><tr><td>'+ this['gwbank_date'] + '</td><td>' + this['gwbank_income'] 
               + '</td><td>' + this['gwbank_name'] + '</td><td>' + com(this['gwbank_money']) + '</td></tr></tbody>';
              
-                if(this['gwbank_name']==name){                
+                if(this['gwbank_name']==name){     // name 매개변수 값이다.           
                     $("#k").append(z).css({'margin-top': '20px','margin-bottom': '20px'});        
                 };//if               
             });//each
@@ -41,23 +41,6 @@ $(function(){
 
 
 
-  $(document).ready(function(){
-    $.getJSON('/api/gwbank_api', function(data){
-      if(data.length>0){
-        $('#kkkkk').empty();
-        //var sum = 0; 반복문안에:comma(this['gwbank_money']), 출력:comma(sum)
-        // sum 함수를 역순으로 출력하는 방법을 찾지못해 숨김
-          $.each(data, function(){
-            var z = '<tbody><tr><td>'+ this['gwbank_date'] + '</td><td>' + this['gwbank_income'] 
-            + '</td><td>' + this['gwbank_name'] + '</td><td>' + com(this['gwbank_money']) + '</td></tr></tbody>';
-           
-                             
-                  $("#kkkk").append(z).css({'margin-top': '20px','margin-bottom': '20px'});        
-                           
-          });//each
-          };//if 
-      });//getjson
-    });//ready
  
 
 

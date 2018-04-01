@@ -65,15 +65,9 @@
                             <span style="color:green">오늘은 진료일입니다!</span>
                             {% else %}
                                 <span style="color:green"> {{ op_4.days }}</span>일 지났습니다.
-                            {% endif %}
-                                                     
-                    </p>                     
-                  
-                
-
-                  
-                {% endblock content1 %}
-            
+                            {% endif %}                                                     
+                    </p>                      
+                {% endblock content1 %}            
 
             </div><!-- col-xs-12 end -->
         </div><!-- row end -->
@@ -87,7 +81,7 @@
 
 
     {% block content2 %}
-
+<div id='uuu'></div>
 
     {% endblock content2 %}
      
@@ -106,13 +100,10 @@
 </div><!-- 전체페이지 base_page_wrap end -->
 </div> <!-- data-role="page: -->
     <br><br><br><br><br><br>
+<script src="{% static 'js/anniversary.js' %}"></script>
 <script src="{% static 'family_site/js/gwbank/gwbank.js' %}"></script>
 <script src="{% static 'family_site/js/wrbank/wrbank.js' %}"></script>
 
 
-<!-- ++++++++++++++++++++++<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>++++++++++++++++++++++++++++ -->
-
-
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 </body>
 </html>

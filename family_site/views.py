@@ -14,12 +14,13 @@ from django.utils.decorators import method_decorator
 
 from datetime import date, datetime, timedelta
 
+
 from django.db.models import Q, F, Sum, Count, Case, When
 
 #from django.contrib.auth.models import User
 from rest_framework import viewsets
 
-from . serializers import GwBankSerializer, WrBankSerializer
+from . serializers import AnniversarySerializer, GwBankSerializer, WrBankSerializer
 
 from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment 
 from . forms import DailyForm, AnniversaryForm, GwBankForm, WrBankForm, NoteForm, NoteCommentForm, NoteCommentUpdateForm 
@@ -53,6 +54,10 @@ class DailyDetailView(DetailView):
     template_name = 'family_site/daily/daily_detail.html'    
 
 # 기념일
+class AnniversaryViewSet(viewsets.ModelViewSet):
+    queryset = Anniversary.objects.all()
+    serializer_class = AnniversarySerializer
+
 class AnniversaryCreateView(LoginRequiredMixin, CreateView):
     model = Anniversary
     form_class = AnniversaryForm

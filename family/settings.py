@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1r.WvABj;1~st$IiZ)l83+#J+1tl`!5-gg>lKtvG&+qPsLhuy-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
@@ -133,12 +133,6 @@ USE_TZ = True
    # 'PAGE_SIZE': 10
 #}
 
-REST_FRAMEWORK = {
-        'DEFAULT_RENDERER_CLASSES' : (
-            'rest_framework.renderers.JSONRenderer',
-            'rest_framework.renderers.TemplateHTMLRenderer',
-        )
-    }
 
 
 # Static files (CSS, JavaScript, Images)
