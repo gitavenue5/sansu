@@ -17,14 +17,13 @@
     </div>
 
 <form>
-    <a class='btn btn-default' href='{% url 'family_site:gwbank_list' %}'>광주은행 보기</a>
-    &nbsp;&nbsp;                 
+    <a class='btn btn-default' href='{% url 'family_site:gwbank_list' %}'>광주은행 보기</a>              
     <select id='wbls' class='btn btn-default' data-native-menu='false'>
         <option selected="selected">입출금선택</option>
         <option value="입 금">입 금</option>
         <option value="출 금">출 금</option>    
-    </select>
-    &nbsp;&nbsp;<button id='kk' class='btn btn-default'>감추기</button>
+    </select>   
+    <button id='wb_btn' class='btn btn-default'>감추기</button>    
 </form>
 
 
@@ -32,8 +31,7 @@
 <table id='wb' class='table table-bordered table-hover'>
     <thead>
         
-    </thead>
- 
+    </thead> 
 </table>
              
         <div id='wrbank_wrap'>

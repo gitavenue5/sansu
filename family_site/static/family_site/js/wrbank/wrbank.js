@@ -4,7 +4,7 @@ function com(x) {
 
 
 $(function(){
-    $('#kk').click(function(){
+    $('#wb_btn').click(function(){
       $('#wb').css({'display': 'none'});
     });
   });
@@ -20,7 +20,6 @@ $(function(){
 
 function income(ttt){
     $(document).ready(function(){
-        crossDomain: true,
         $.getJSON('/api/wrbank_api', function(data){
 
             if(data.length>0){
