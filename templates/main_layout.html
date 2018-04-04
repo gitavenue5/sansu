@@ -57,7 +57,17 @@
                     <p>- 지금까지 <span>{{ hospitalization }}</span>일째 입니다.</p><br>
 
                     <p id='pp'>- 진료예약<br>
-                         &nbsp;&nbsp;- 2018.05.11일(금요일, 10시) 전대병원 안과 예약(3동 2층, 성미선 교수) :
+                        &nbsp;&nbsp;- 신경외과 : 2018.05.03일(목요일, 09:30시) 전대병원 신경외과 예약(1동 1층, 이정길 교수) :
+                        
+                            {% if neurosurgery_1 > neurosurgery_2 %}
+                                <span style="color:green"> {{neurosurgery_3.days }}</span>일 남았습니다.
+                            {% elif neurosurgery_1 == neurosurgery_2 %}
+                            <span style="color:green">오늘은 진료일입니다!</span>
+                            {% else %}
+                                <span style="color:green"> {{ neurosurgery_4.days }}</span>일 지났습니다.
+                            {% endif %} 
+
+                        <br> &nbsp;&nbsp;- 안 과 : 2018.05.11일(금요일, 10시) 전대병원 안과 예약(3동 2층, 성미선 교수) :
                          
                             {% if op_1 > op_2 %}
                                 <span style="color:green"> {{ op_3.days }}</span>일 남았습니다.
@@ -96,6 +106,35 @@
     {% endblock footer %}
 
     {% block script %}
+
+<script>
+    
+    $(document).ready(function(){
+        $.getJSON('/api/anniversary_api', function(data){
+            if(data.length>0){
+                $('#kk').empty();
+                var a = "{{a}}";
+                var b = "{{anni}}";
+                var c = "{{ann}}";
+                var d2 = new Date(2014, 2, 1); 
+                console.log(d2);
+                
+                $.each(data, function(){
+                    var z = '<ul><li>' + this['anniversary_date'] + '</li></ul>';
+                    var d = this['anniversary_date'];
+                    if(d==b){
+                        console.log("uu");
+                    }else{
+                        console.log('닮지않음@');
+                    }//if
+                    
+                })// each
+            }//if
+        })//getjson
+    })// ready
+    
+</script>
+
     {% endblock script %}
 </div><!-- 전체페이지 base_page_wrap end -->
 </div> <!-- data-role="page: -->

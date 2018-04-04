@@ -40,6 +40,19 @@ class SansuTemplateView(TemplateView):
         context['hospitalization'] = (cnuh_3 + convalescentHospital_3).days + 1     # timedelt(days=1) 를 사용할때 .days + 1 를 대신해서 사용
        
        # 병원 진료 예약일
+
+       # 신경외과
+        neurosurgery_1 = date(2018,5,3)
+        neurosurgery_2 = date.today()
+        neurosurgery_3 = neurosurgery_1 - neurosurgery_2 # 남았다
+        neurosurgery_4 = neurosurgery_2 - neurosurgery_1 # 지났다
+        context['neurosurgery_1'] = neurosurgery_1
+        context['neurosurgery_2'] = neurosurgery_2
+        context['neurosurgery_3'] = neurosurgery_3
+        context['neurosurgery_4'] = neurosurgery_4
+
+
+
        # 안과
         op_1 = date(2018,5,11)
         op_2 = date.today()           
