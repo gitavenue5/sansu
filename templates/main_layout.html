@@ -46,9 +46,11 @@
         <div class="row">
             <div class="col-xs-12">
                 <h4 class="alert alert-success" role="alert">Sansu-Memory &nbsp;&nbsp;{% now 'Y.m.d' %}</h4>
+                
                           
                 {% block content1 %}        
-             
+                <div id='birthday'  class="alert alert-warning" role="alert" style='display:none; color:black;'></div>
+               
                 <div id='note'>   
                     <p>- 2017.06월26일(월) ~ 2017.08.28(월) 어머님 전대병원 입원기간은 <span>{{ cnuh_3.days }}</span>일 입니다 - ({{ cnuh_1|timesince }} &nbsp;전).</p>       
                     <p>- 2017.08.28(월) ~ 2017.08.29(화) 에스웰 요양병원 <span>1</span>일.</p>                                     
@@ -91,7 +93,7 @@
 
 
     {% block content2 %}
-<div id='uuu'></div>
+
 
     {% endblock content2 %}
      
@@ -101,40 +103,10 @@
     </div><!-- class  container end-->
 
 
-    {% block footer %}
-    
+    {% block footer %}    
     {% endblock footer %}
 
     {% block script %}
-
-<script>
-    
-    $(document).ready(function(){
-        $.getJSON('/api/anniversary_api', function(data){
-            if(data.length>0){
-                $('#kk').empty();
-                var a = "{{a}}";
-                var b = "{{anni}}";
-                var c = "{{ann}}";
-                var d2 = new Date(2014, 2, 1); 
-                console.log(d2);
-                
-                $.each(data, function(){
-                    var z = '<ul><li>' + this['anniversary_date'] + '</li></ul>';
-                    var d = this['anniversary_date'];
-                    if(d==b){
-                        console.log("uu");
-                    }else{
-                        console.log('닮지않음@');
-                    }//if
-                    
-                })// each
-            }//if
-        })//getjson
-    })// ready
-    
-</script>
-
     {% endblock script %}
 </div><!-- 전체페이지 base_page_wrap end -->
 </div> <!-- data-role="page: -->
