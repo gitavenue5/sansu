@@ -51,34 +51,41 @@
                 {% block content1 %}        
                 <div id='birthday'  class="alert alert-warning" role="alert" style='display:none; color:black;'></div>
                
-                <div id='note'>   
-                    <p>- 2017.06월26일(월) ~ 2017.08.28(월) 어머님 전대병원 입원기간은 <span>{{ cnuh_3.days }}</span>일 입니다 - ({{ cnuh_1|timesince }} &nbsp;전).</p>       
-                    <p>- 2017.08.28(월) ~ 2017.08.29(화) 에스웰 요양병원 <span>1</span>일.</p>                                     
-                    <p>- 2017.08.29일(화) 광주시립제2요양병원에 입원 하신지 <span>{{ convalescentHospital_3.days }}</span> 일째 입니다 - ({{ convalescentHospital_1|timesince }} &nbsp;전).</p>
-                    
-                    <p>- 지금까지 <span>{{ hospitalization }}</span>일째 입니다.</p><br>
-
-                    <p id='pp'>- 진료예약<br>
-                        &nbsp;&nbsp;- 신경외과 : 2018.05.03일(목요일, 09:30시) 전대병원 신경외과 예약(1동 1층, 이정길 교수) :
+                <div id='hospitalized'>   
+                    <ul>입원일자</ul>
+                    <ul>
+                        <li>2017.06월26일(월) ~ 2017.08.28(월) 어머님 전대병원 입원기간은 <span>{{ cnuh_3.days }}</span>일 입니다 - ({{ cnuh_1|timesince }} &nbsp;전).</li>       
+                        <li>2017.08.28(월) ~ 2017.08.29(화) 에스웰 요양병원 <span>1</span>일.</li>                                     
+                        <li>2017.08.29일(화) 광주시립제2요양병원에 입원 하신지 <span>{{ convalescentHospital_3.days }}</span> 일째 입니다 - ({{ convalescentHospital_1|timesince }} &nbsp;전).</li>
+                        <li>지금까지 <span>{{ hospitalization }}</span>일째 입니다.</li>
+                    </ul>
+                </div><br>
+                
+                <div id='appointment'>
+                    <ul>진료예약</ul>
+                    <ul>
+                        <li>신경외과 : 2018.05.03일(목요일, 09:30시) 전대병원 신경외과 예약(1동 1층, 이정길 교수) :
                         
                             {% if neurosurgery_1 > neurosurgery_2 %}
-                                <span style="color:green"> {{neurosurgery_3.days }}</span>일 남았습니다.
+                                <span> {{neurosurgery_3.days }}</span>일 남았습니다.
                             {% elif neurosurgery_1 == neurosurgery_2 %}
-                            <span style="color:green">오늘은 진료일입니다!</span>
+                                 <span>오늘은 진료일입니다!</span>
                             {% else %}
-                                <span style="color:green"> {{ neurosurgery_4.days }}</span>일 지났습니다.
+                                <span> {{ neurosurgery_4.days }}</span>일 지났습니다.
                             {% endif %} 
-
-                        <br> &nbsp;&nbsp;- 안 과 : 2018.05.11일(금요일, 10시) 전대병원 안과 예약(3동 2층, 성미선 교수) :
-                         
+                        </li>    
+                        <li> 안 과 : 2018.05.11일(금요일, 10시) 전대병원 안과 예약(3동 2층, 성미선 교수) :
+                        
                             {% if op_1 > op_2 %}
-                                <span style="color:green"> {{ op_3.days }}</span>일 남았습니다.
+                                <span> {{ op_3.days }}</span>일 남았습니다.
                             {% elif op_1 == op_2 %}
-                            <span style="color:green">오늘은 진료일입니다!</span>
+                            <span>오늘은 진료일입니다!</span>
                             {% else %}
-                                <span style="color:green"> {{ op_4.days }}</span>일 지났습니다.
+                                <span> {{ op_4.days }}</span>일 지났습니다.
                             {% endif %}                                                     
-                    </p>                      
+                        </li>
+                    </ul> 
+                </div>                     
                 {% endblock content1 %}            
 
             </div><!-- col-xs-12 end -->

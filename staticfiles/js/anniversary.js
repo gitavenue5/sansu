@@ -5,15 +5,26 @@
                    
                // $('#birthday').empty();  
                 var now = new Date();
-                var d = now.getFullYear();
-                    d += '-' + (now.getMonth() + 1) ;
-                    d += '-' + now.getDate();  
-                    
+                var year = now.getFullYear();
+                var month = (now.getMonth() + 1) ;
+                var day = now.getDate();  
+
+                if((month+"").length<2){
+                    month = "0" + month;
+                }// if getMonth
+                
+                if((day + "").length < 2){
+                    day = "0" + day;
+                }// if getday
+
+
+                var today = year + '-' + month + '-' + day;
+                    console.log(today)
                 $.each(data, function(){
                     var b = this['anniversary_date'];           
                                             
-                        if(b==d){
-                            $('#birthday').show().append(this['anniversary_name'] + "님 생일 축하합니다!") ;
+                        if(b==today){
+                            $('#birthday').show().append('<span style="font-weight: bold; font-family:바탕;">' + this['anniversary_name']  + '</span>' + "" + '님의 생일을 축하합니다!') ;
                             
                         }//if
                         
@@ -22,4 +33,5 @@
             };//if
         });//getjson
     });// ready
+
     

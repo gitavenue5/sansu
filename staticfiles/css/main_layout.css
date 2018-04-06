@@ -36,14 +36,35 @@ h4 {
 
 #login_signup{
     padding-left: 20px;
-    padding-top: 4px;
-    
+    padding-top: 4px;    
 }
 
+#hospitalized > ul:nth-child(1) {
+    border-left: 3px solid #703F3F;
+    padding-left: 10px;    
+}
 
+#hospitalized > ul > li {    
+    margin-left: 26px;   
+    padding: 0px 0px 2px 0px; 
+}
 
-#note > p > span {
-    color: green;
+#hospitalized > ul > li > span {
+    color: #703F3F;
     font-weight: bold;
 }
 
+#appointment > ul:nth-child(1) {
+    border-left: 3px solid green;
+    padding-left: 10px;    
+}
+
+#appointment > ul > li {    
+    margin-left: 26px;   
+    padding: 0px 0px 2px 0px; 
+}
+
+#appointment > ul > li > span {
+    color: green;
+    font-weight: bold;
+}
