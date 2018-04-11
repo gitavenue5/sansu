@@ -19,7 +19,6 @@
 
 
                 var today = year + '-' + month + '-' + day;
-                    console.log(today)
                 $.each(data, function(){
                     var b = this['anniversary_date'];           
                                             

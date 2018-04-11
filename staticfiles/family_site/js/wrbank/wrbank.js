@@ -21,9 +21,10 @@ $(function(){
 function income(ttt){
     $(document).ready(function(){
         $.getJSON('/api/wrbank_api', function(data){
-
+            var jjjj = '<tr><th>날 자</th><th>입출금</th><th>금 액</th><th>비 고</th><th>대출이자</th><th>대출원금</th><th>이자+원금</th><th>대출잔액</th><th>통장잔액</th></tr>'; 
             if(data.length>0){
                 $('#wb').empty();
+                $('#wb').prepend(jjjj); // <th></th> 삽입코드
 
                 $.each(data, function(){
 
@@ -38,7 +39,7 @@ function income(ttt){
 
                    if(this['wrbank_deposit_withdrawal']==ttt){
 
-                        $("#wb").append(t).css({'margin-top': '20px','margin-bottom': '20px'});
+                        $("#wb").append(t).css({'margin-top': '20px','margin-bottom': '80px'});
                     };//if
                 });//each
             };//if
