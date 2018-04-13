@@ -117,6 +117,9 @@ class GwBankListView(ListView):
         context['hwasun'] = GwBank.objects.filter(gwbank_name='이화순').aggregate(이화순=Sum(F('gwbank_money')))['이화순'] or 0
         #context['k'] = GwBank.objects.filter(gwbank_name='이채순')
         context['k'] = GwBank.objects.all()
+
+        context['total'] = context['chaesun'] + context['gichang'] + context['hwasun']
+
         return context
 
 

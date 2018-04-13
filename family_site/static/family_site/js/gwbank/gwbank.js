@@ -48,7 +48,7 @@ function chae(name){
                 };//if               
                });//each           
             };//if  
-            $('#k').append('<tr><td colspan="4">' + '총액 : ' + com(sum)) + '원</td></tr>';              
+            $('#k').append('<tr><td colspan="4">' + '계 : ' + com(sum) + '원' + '</td></tr>');              
         });//getjson  
          
       });//ready     

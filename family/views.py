@@ -42,7 +42,7 @@ class SansuTemplateView(TemplateView):
        # 병원 진료 예약일
 
        # 신경외과
-        neurosurgery_1 = date(2018,5,3)
+        neurosurgery_1 = date(2018,4,26)
         neurosurgery_2 = date.today()
         neurosurgery_3 = neurosurgery_1 - neurosurgery_2 # 남았다
         neurosurgery_4 = neurosurgery_2 - neurosurgery_1 # 지났다
