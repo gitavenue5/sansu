@@ -20,12 +20,18 @@
 
                 var today = year + '-' + month + '-' + day;
                 $.each(data, function(){
-                    var b = this['anniversary_date'];           
+                    var b = this['anniversary_date']; 
+                    var c = this['anniversary_name'];          
                                             
                         if(b==today){
                             $('#birthday').show().append('<span style="font-weight: bold; font-family:바탕;">' + this['anniversary_name']  + '</span>' + "" + '님의 생일을 축하합니다!') ;
                             
                         }//if
+
+                        if((b==today)&&(c=='어머님 생신')){
+                            //$('#birthday').show().append('<span style="font-weight: bold; font-family:바탕;">' + this['anniversary_name']  + '</span>' + "" + '을 축하합니다!') ;
+                            $('#birthday').show().replaceWith('<span style="font-weight: bold; font-family:바탕;">' + this['anniversary_name']  + '</span>' + "" + '을 축하합니다!') ;
+                        }
                         
                     
                 });// each
