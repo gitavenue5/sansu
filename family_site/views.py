@@ -76,7 +76,10 @@ class AnniversaryListView(ListView):
         context['a'] = anni
         b = date.today()
         
-        context['c'] = b
+        context['c'] = repr(b)        
+        f = datetime.strptime('2018-04-17', '%Y-%m-%d')
+        context['ff'] = str(f)[:11]
+       
         return context
 
 # 광주은행

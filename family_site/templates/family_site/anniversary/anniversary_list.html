@@ -13,18 +13,20 @@
             <th>음&nbsp;&nbsp;력</th>
         </tr>
     </thead>
-    <tbody>
-        <tr>{% for i in object_list %}
+    <tbody>{% for i in object_list %}    
+        <tr id='back'>       
             <td>{{ i.anniversary_date }}</td>
             <td>{{ i.anniversary_day }}</td>
             <td>{{ i.anniversary_name }}</td>
-            <td>{{ i.anniversary_lunar_date }}</td>
+            <td>{{ i.anniversary_lunar_date }}</td>         
         </tr>{% endfor %}
     </tbody>
 </table>
 <br><br><br><br><br><br>
+
+
 {% endblock content1 %}
 
 {% block content2 %}
-
+ 
 {% endblock content2 %}
