@@ -65,6 +65,18 @@ class SansuTemplateView(TemplateView):
         context['op_3'] = op_3  # 남았습니다.
         context['op_4'] = op_4   # 지났습니다.
 
+        # 안과 2018-11-09
+        op_11 = date(2018,11,9)
+        op_22 = date.today()           
+        
+        op_33 = op_11 - op_22
+        op_44 = op_22 - op_11
+
+        context['op_11'] = op_11
+        context['op_22'] = op_22
+        context['op_33'] = op_33  # 남았습니다.
+        context['op_44'] = op_44   # 지났습니다.
+
         # test
         t1 = datetime(2018,2,27)
         t2 = datetime.now()
