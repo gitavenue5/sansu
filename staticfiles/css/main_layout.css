@@ -54,6 +54,22 @@ h4 {
     font-weight: bold;
 }
 
+#now_appointment > ul:nth-child(1) {
+    border-left: 3px solid #01DFD7;
+    padding-left: 10px;    
+}
+
+#now_appointment > ul > li {    
+    margin-left: 26px;   
+    padding: 0px 0px 36px 0px; 
+}
+
+#now_appointment > ul > li > span {
+    color: #01DFD7;
+    font-weight: bold;
+}
+
+
 #appointment > ul:nth-child(1) {
     border-left: 3px solid green;
     padding-left: 10px;    
