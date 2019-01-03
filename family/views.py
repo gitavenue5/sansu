@@ -11,6 +11,12 @@ import re
 class SansuTemplateView(TemplateView):
     template_name = 'main_layout.html'
 
+    def a(self, dd):
+        b = date.today()
+        self.dd = dd
+        d=b-self.dd
+        return d
+
     
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
@@ -22,6 +28,9 @@ class SansuTemplateView(TemplateView):
         # 입원기간
         context['cnuh_3'] = cnuh_2 - cnuh_1
         context['cnuh_1'] = cnuh_1
+
+        context['name'] = self.a(date(2018,11,17))
+
         
        # 요양병원 입원일수 아래것이 단순함.
         #convalescentHospital_1 = datetime(2017,8,29)
