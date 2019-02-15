@@ -1,7 +1,4 @@
-from django.shortcuts import render
-from django.views.generic.base import TemplateView
 
-from django.contrib.auth.forms import UserCreationForm
 
 from django.shortcuts import render, get_object_or_404, resolve_url, reverse, redirect
 from django.views.generic import TemplateView, CreateView, ListView, DetailView, UpdateView, DeleteView, FormView
@@ -173,6 +170,10 @@ class WrBankListView(ListView):
         
         context['kk'] = WrBank.objects.filter(wrbank_money2__gt=0).count  
         context['kkk'] = WrBank.objects.filter(wrbank_money3__gt=0).count
+
+        context['lee_sang_soon'] = WrBank.objects.filter(wrbank_note__startswith='이상순(가족)').aggregate(금액=Sum(F('wrbank_money1')))['금액'] or 0
+
+        context['lee_sang_soom_count'] = WrBank.objects.filter(wrbank_note__startswith='이상순(가족)').count
 
         
         return context
