@@ -160,17 +160,7 @@ class WrBankListView(ListView):
         context['principal'] = WrBank.objects.all().aggregate(원금총액=Sum(F('wrbank_money3')))['원금총액'] or 0
         context['deposit_withdrawal'] = WrBank.objects.all().aggregate(대출이자원금총액=Sum(F('wrbank_money2')+F('wrbank_money3')))['대출이자원금총액'] or 0
 
-        
-        hap = WrBank.objects.annotate(u=F('wrbank_money2') + F('wrbank_money3'))
-        context['hap'] = hap[0].u
-
-
-
-        ppaegi = WrBank.objects.all().annotate(Count('wrbank_money2'))
-        context['ppaegi'] = ppaegi
-        
-        
-        context['kk'] = WrBank.objects.filter(wrbank_money2__gt=0).count  
+        context['kk'] = WrBank.objects.filter(wrbank_money2__gt=0).count
         context['kkk'] = WrBank.objects.filter(wrbank_money3__gt=0).count
 
         context['lee_sang_soon'] = WrBank.objects.filter(wrbank_note__startswith='이상순(가족)').aggregate(금액=Sum(F('wrbank_money1')))['금액'] or 0
