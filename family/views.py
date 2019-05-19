@@ -64,8 +64,8 @@ class SansuTemplateView(TemplateView):
         op_1111 = date(2019, 6, 21)
         op_2222 = date.today()
 
-        op_333 = op_1111 - op_2222
-        op_444 = op_2222 - op_1111
+        op_3333 = op_1111 - op_2222
+        op_4444 = op_2222 - op_1111
 
         context['op_111'] = op_1111
         context['op_222'] = op_2222
