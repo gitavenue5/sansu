@@ -60,6 +60,18 @@ class SansuTemplateView(TemplateView):
         context['neurosurgery_3'] = neurosurgery_3
         context['neurosurgery_4'] = neurosurgery_4
 
+        # 안과(2019, 06, 21)
+        op_1111 = date(2019, 6, 21)
+        op_2222 = date.today()
+
+        op_333 = op_1111 - op_2222
+        op_444 = op_2222 - op_1111
+
+        context['op_111'] = op_1111
+        context['op_222'] = op_2222
+        context['op_333'] = op_3333 # 남았습니다.
+        context['op_444'] = op_4444  # 지났습니다.
+
         # 안과(2019, 5, 10)
         op_111 = date(2019, 5, 10)
         op_222 = date.today()
