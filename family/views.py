@@ -67,10 +67,10 @@ class SansuTemplateView(TemplateView):
         op_3333 = op_1111 - op_2222
         op_4444 = op_2222 - op_1111
 
-        context['op_111'] = op_1111
-        context['op_222'] = op_2222
-        context['op_333'] = op_3333 # 남았습니다.
-        context['op_444'] = op_4444  # 지났습니다.
+        context['op_1111'] = op_1111
+        context['op_2222'] = op_2222
+        context['op_3333'] = op_3333 # 남았습니다.
+        context['op_4444'] = op_4444  # 지났습니다.
 
         # 안과(2019, 5, 10)
         op_111 = date(2019, 5, 10)
