@@ -5,19 +5,32 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.urlresolvers import reverse_lazy
 
 from datetime import datetime, date, timedelta
+
+
 import re
     
 # 처음페이지 함수
 class SansuTemplateView(TemplateView):
     template_name = 'main_layout.html'
 
-    def a(self, dd):
-        b = date.today()
-        self.dd = dd
-        d=b-self.dd
-        return d
+    # 예약 날자 계산하는 함수
+    def ophthalmology(self, annivarsary):
+        today = date.today()
+        self.annivarsary = annivarsary
+        #self.anivarsary_day.strftime('%Y-%m-%d')
 
-    
+        if self.annivarsary > today:
+            self.kkk = self.annivarsary - today
+            self.kkk = '{.days}일 남았습니다'.format(self.kkk)
+        elif self.annivarsary == today:
+            self.kkk = '{}일 오늘은 안과 진료일입니다'.format(today)
+
+        else:
+            self.kkk = today - self.annivarsary
+            self.kkk = '{.days}일 지났습니다'.format(self.kkk)
+        return self.kkk
+
+
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
 
@@ -29,7 +42,11 @@ class SansuTemplateView(TemplateView):
         context['cnuh_3'] = cnuh_2 - cnuh_1
         context['cnuh_1'] = cnuh_1
 
-        context['name'] = self.a(date(2018,11,17))
+        # 안과 예약 날자 함수 호출
+
+        context['ophthalmology'] = self.ophthalmology(date(2019, 5, 21))
+        #context['ophthalmology'] = self.ophthalmology(date(2019, 6, 21))
+
 
         
        # 요양병원 입원일수 아래것이 단순함.
@@ -59,6 +76,8 @@ class SansuTemplateView(TemplateView):
         context['neurosurgery_2'] = neurosurgery_2
         context['neurosurgery_3'] = neurosurgery_3
         context['neurosurgery_4'] = neurosurgery_4
+
+
 
         # 안과(2019, 06, 21)
         op_1111 = date(2019, 6, 21)
