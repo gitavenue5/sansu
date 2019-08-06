@@ -4,11 +4,17 @@ from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
 from django.core.urlresolvers import reverse_lazy
 
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.http.response import StreamingHttpResponse
+import os, sys
+import cgi
 from datetime import datetime, date, timedelta
+import datetime, pickle
+from . import views
 
 
-import re
-    
+
 # 처음페이지 함수
 class SansuTemplateView(TemplateView):
     template_name = 'main_layout.html'
@@ -17,42 +23,51 @@ class SansuTemplateView(TemplateView):
     def ophthalmology(self, annivarsary):
         today = date.today()
         self.annivarsary = annivarsary
-        #self.anivarsary_day.strftime('%Y-%m-%d')
 
         if self.annivarsary > today:
             self.kkk = self.annivarsary - today
-            self.kkk = '{.days}일 남았습니다'.format(self.kkk)
+            self.kkk = "{.days}일 남았습니다".format(self.kkk)
         elif self.annivarsary == today:
             self.kkk = '{}일 오늘은 안과 진료일입니다'.format(today)
-
         else:
             self.kkk = today - self.annivarsary
             self.kkk = '{.days}일 지났습니다'.format(self.kkk)
         return self.kkk
 
+    # 기념일 계산 제너레이터
+    def birthday(self):
+        with open('aniversary_binary.txt', 'rb') as f:
+            a = pickle.load(f)
+            for key, value in a.items():
+                a[key] = key
+                today = datetime.date.today()
+                time = datetime.datetime.strptime(str(value), '%Y-%m-%d').date()
+
+                if (today == time):
+                    yield "{name}".format(name = a[key])
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
+        # 생일
+        context['birthday'] = self.birthday()
 
         # 전대병원 입원기간
         cnuh_1 = date(2017,6,26)
         cnuh_2 = date(2017,8,28)
         cnuh_3 = cnuh_2 - cnuh_1
+
         # 입원기간
         context['cnuh_3'] = cnuh_2 - cnuh_1
         context['cnuh_1'] = cnuh_1
 
         # 안과 예약 날자 함수 호출
-
-        context['ophthalmology'] = self.ophthalmology(date(2019, 5, 21))
+        context['ophthalmology'] = self.ophthalmology(date(2019, 12, 13))
         #context['ophthalmology'] = self.ophthalmology(date(2019, 6, 21))
+
 
 
         
        # 요양병원 입원일수 아래것이 단순함.
-        #convalescentHospital_1 = datetime(2017,8,29)
-        #convalescentHospital_2 = datetime.now()
-        #context['convalescentHospital_3'] = convalescentHospital_2 - convalescentHospital_1
 
         convalescentHospital_1 = date(2017,8,29)
         convalescentHospital_2 = date.today()
@@ -105,40 +120,6 @@ class SansuTemplateView(TemplateView):
 
 
 
-       # 안과
-        op_1 = date(2018,5,11)
-        op_2 = date.today()           
-        
-        op_3 = op_1 - op_2
-        op_4 = op_2 - op_1
-
-        context['op_1'] = op_1
-        context['op_2'] = op_2
-        context['op_3'] = op_3  # 남았습니다.
-        context['op_4'] = op_4   # 지났습니다.
-
-        # 안과 2018-11-09
-        op_11 = date(2018,11,9)
-        op_22 = date.today()           
-        
-        op_33 = op_11 - op_22
-        op_44 = op_22 - op_11
-
-        context['op_11'] = op_11
-        context['op_22'] = op_22
-        context['op_33'] = op_33  # 남았습니다.
-        context['op_44'] = op_44   # 지났습니다.
-
-        # test
-        t1 = datetime(2018,2,27)
-        t2 = datetime.now()
-        context['t3'] = t1 -t2 #남았습니다.
-        context['t4'] = t2 - t1 # 지났습니다.    
-
-        a=date(2015,3,11)  
-        
-        context['a'] = a
-
         # 기념일 
         anni = date(2018,1,10)
         ann = date(2018,1,10)
@@ -146,7 +127,7 @@ class SansuTemplateView(TemplateView):
         context['ann'] = ann
         return context
 
-    
+
 
 # 회원가입 함수
 class UserCreateView(CreateView):
