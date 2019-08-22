@@ -7,8 +7,12 @@ from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http.response import StreamingHttpResponse
-import os, sys
-import cgi
+import os, sys, pandas, cgi
+from openpyxl import load_workbook
+from IPython.display import HTML
+from PIL import Image
+import numpy as np
+
 from datetime import datetime, date, timedelta
 import datetime, pickle
 from . import views
@@ -48,6 +52,7 @@ class SansuTemplateView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
+
         # 생일
         context['birthday'] = self.birthday()
 
@@ -63,12 +68,8 @@ class SansuTemplateView(TemplateView):
         # 안과 예약 날자 함수 호출
         context['ophthalmology'] = self.ophthalmology(date(2019, 12, 13))
         #context['ophthalmology'] = self.ophthalmology(date(2019, 6, 21))
-
-
-
         
        # 요양병원 입원일수 아래것이 단순함.
-
         convalescentHospital_1 = date(2017,8,29)
         convalescentHospital_2 = date.today()
         convalescentHospital_3 = convalescentHospital_2 - convalescentHospital_1

@@ -1,35 +1,44 @@
-#wrbank_wrap {
-    text-align: center;
-}
 
-#wrbank_wrap h4 {
+
+.font {
     text-align: center;
     font-family: '나눔고딕', 고딕, 바탕;
     color: black;
+    font-size: 18px;
 }
 
-#wrbank_wrap table, th, td {
+.woori_bank_css {
+    padding: 4px;
+}
+
+.woori_bank_css thead > tr > th{
+    color: black;
+    padding: 10px;
+    font-weight: bold;
     text-align: center;
 }
 
-#wrbank_pagination {
+.woori_bank_css tbody > tr > td{
+    color: black;
+    padding: 4px 4px 4px 4px;
     text-align: center;
 }
 
-#loan {
+.woori_bank_css tr > td:nth-child(2){
+}
+
+.woori_bank_css tr > td:nth-child(3){
+
+}
+
+.woori_bank_css tr > td:nth-child(5){
+    text-align: left;
+}
+
+.woori_bank_css tr > td:nth-child(9){
     color: maroon;
 }
-<<<<<<< HEAD
-=======
 
-
-#wbl > ul {
-    list-style-type: square;
+.woori_bank_css tr > td:nth-last-child(1){
+    color: green;
 }
-
-#wbl > ul > li {
-    /*float: left;*/
-    padding: 20px;
-    display: inline;    
-}
->>>>>>> 163298a352472d71eee27d553bee416aa8d313fe

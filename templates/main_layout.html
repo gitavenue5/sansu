@@ -18,7 +18,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>    
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-            
+
 </head>
 
 <body>
@@ -56,8 +56,8 @@
                 <div id='birthday1'  class="alert alert-warning" role="alert" style='display:none; color:black;'></div>
 
                 <div id='birthday2'  class="alert alert-warning" role="alert" style='display:none; color:black;'></div>
-              
-                <div id='hospitalized'>   
+
+                <div id='hospitalized'>
                     <ul>입원일자</ul>
                     <ul>
                         <li>어머님 전대병원 입원기간 : <span>{{ cnuh_3.days }}</span>일.({{ cnuh_1|timesince }} &nbsp;전), 2017.06월26일(월) ~ 2017.08.28(월). </li>       
@@ -90,8 +90,6 @@
                             {% endif %}
                         </li>
 
-
-
                         <li>신경외과 : 2018.04.26일(목요일, 11:20시) 전대병원 신경외과 예약(1동 1층, 이정길 교수) :
                         
                             {% if neurosurgery_1 > neurosurgery_2 %}
@@ -104,9 +102,7 @@
                         </li>   
                     </ul> 
                 </div>
-
-
-                {% endblock content1 %}            
+             {% endblock content1 %}
 
             </div><!-- col-xs-12 end -->
         </div><!-- row end -->
@@ -116,7 +112,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                
 
 
     {% block content2 %}

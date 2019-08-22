@@ -16,8 +16,6 @@ $(function(){
     });//on
   });//function
 
-
-
 function income(ttt){
     $(document).ready(function(){
         $.getJSON('/api/wrbank_api', function(data){
@@ -53,3 +51,10 @@ $(function(){
       $('#k').hide();
     });
   });
+
+// 우리은행 내역서 엑셀 파일 보기 숨기기.
+$(function(){
+    $("#woori_bank_show").click(function() {
+            $('#woori_bank_pandas').toggle('fast');
+             });
+     });

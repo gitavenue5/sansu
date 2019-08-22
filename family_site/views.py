@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 # 로그인 페이지로 가기
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-
+import pandas
 
 from datetime import date, datetime, timedelta
 
@@ -125,7 +125,6 @@ class GwBankListView(ListView):
 
 
 # 우리은행
-
 class WrBankViewSet(viewsets.ModelViewSet):
     queryset = WrBank.objects.all()
     serializer_class = WrBankSerializer
@@ -157,6 +156,64 @@ class WrBankListView(ListView):
 
     def get_context_data(self, **kwarges):
         context = super(WrBankListView, self).get_context_data(**kwarges)
+
+        # 우리은행 엑셀 불러오기
+        bank = pandas.read_excel('woori_bank.xlsx')
+
+        # 대출 이자
+        woori_a = bank['대출이자'].count()
+        woori_b = bank['대출이자'].sum().astype(int)
+        context['woori_a'] = woori_a
+        context['woori_b'] = woori_b
+
+        # 대출 원금
+        woori_e = bank['대출원금'].count().astype(int)
+        woori_f = bank['대출원금'].sum().astype(int)
+        context['woori_e'] = woori_e
+        context['woori_f'] = woori_f
+
+        # 대출 이자 + 대출 원금
+        woori_c = bank['합    계'].count()
+        woori_d = bank['합    계'].sum().astype(int)
+        context['woori_c'] = woori_c
+        context['woori_d'] = woori_d
+
+        # 이상순 이름을 찾기위해 loc함수 시용, 회수와 합게 함수 사용
+        # .loc 메소드는 라벨과 정수로, iloc 는 정수로만 접근 가능하며, iloc 는 음수를 지원해서 마지막 행,열,셀을 참조할 수 있다
+        cu = bank[['설    명', '금    액']]
+        cu_c = cu.loc[cu['설    명'].str.contains('이상순'), ['금    액']].count()
+        cu_d = cu.loc[cu['설    명'].str.contains('이상순'), ['금    액']].sum()
+
+        # 사천만원 더하기
+        cu_d = cu_d + 40000000
+        context['cu_c'] = cu_c
+        context['cu_d'] = cu_d
+
+        # 이 문법이 맞는지는 모름
+        # DataFrame에서 3자리수 콤마와 문자열을 제거하지 못해 이런 쌩쇼를 함.
+        # 대출 잔액
+        count = bank.iloc[[-1], [-2]]  # iloc 메소드로 마지막 행, 열의 마지막 2번째 데이터를 가져온다
+        countt = count.values[-1]  # 변수를 한번 더 적용하면 count DataFrame 형을 리스트 값으로 변형시켜 values 메소드로 값을 취한다
+        for ii in countt:  # for문으로 리스트을 벗긴다
+            print(ii)
+        context['ii'] = ii
+
+        # 통장 잔액도 대출 잔액과 같다
+        count1 = bank.iloc[[-1], [-1]]
+        count11 = count1.values[-1]
+        for i in count11:
+            print(i)
+        context['i'] = i
+
+        f = bank.to_html(classes='woori_bank_css')
+
+        context['aa'] = f # 새로운 우리은행 판다 엑셀 작업 끝
+
+
+
+
+
+
         context['interest'] = WrBank.objects.all().aggregate(대출이자총액=Sum(F('wrbank_money2')))['대출이자총액'] or 0
         context['principal'] = WrBank.objects.all().aggregate(원금총액=Sum(F('wrbank_money3')))['원금총액'] or 0
         context['deposit_withdrawal'] = WrBank.objects.all().aggregate(대출이자원금총액=Sum(F('wrbank_money2')+F('wrbank_money3')))['대출이자원금총액'] or 0
