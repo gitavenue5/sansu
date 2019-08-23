@@ -53,7 +53,7 @@ $(function(){
   });
 
 $(function(){
-    $("#woori_bank_show").on('click', function() {
+    $(document).on('click',"#woori_bank_show", function() {
             $('#woori_bank_pandas').toggle('fast');
            });
      });
