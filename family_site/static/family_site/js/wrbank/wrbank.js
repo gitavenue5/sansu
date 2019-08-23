@@ -52,9 +52,16 @@ $(function(){
     });
   });
 
-// 우리은행 내역서 엑셀 파일 보기 숨기기.
 $(function(){
-    $("#woori_bank_show").click(function() {
+    $("#woori_bank_show").on('click', function() {
             $('#woori_bank_pandas').toggle('fast');
-             });
+           });
      });
+
+
+// 우리은행 내역서 엑셀 파일 보기 숨기기.
+//$(function(){
+  //  $("#woori_bank_show").click(function() {
+    //        $('#woori_bank_pandas').toggle('fast');
+      //       });
+    // });
