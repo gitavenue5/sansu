@@ -189,9 +189,10 @@ class WrBankListView(ListView):
         context['cu_c'] = cu_c
         context['cu_d'] = cu_d
 
-        # 이 문법이 맞는지는 모름
-        # DataFrame에서 3자리수 콤마와 문자열을 제거하지 못해 이런 쌩쇼를 함.
-        # 대출 잔액
+        """\ 대출잔액
+        이 문법이 맞는지는 모름
+        DataFrame에서 3자리수 콤마와 문자열을 제거하지 못해 이런 쌩쇼를 함. \        
+        """
         count = bank.iloc[[-1], [-2]]  # iloc 메소드로 마지막 행, 열의 마지막 2번째 데이터를 가져온다
         countt = count.values[-1]  # 변수를 한번 더 적용하면 count DataFrame 형을 리스트 값으로 변형시켜 values 메소드로 값을 취한다
         for ii in countt:  # for문으로 리스트을 벗긴다
@@ -205,7 +206,7 @@ class WrBankListView(ListView):
             print(i)
         context['i'] = i
 
-        f = bank.to_html(classes='woori_bank_css')
+        f = bank.to_html()
 
         context['aa'] = f # 새로운 우리은행 판다 엑셀 작업 끝
 
