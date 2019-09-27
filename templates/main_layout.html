@@ -60,8 +60,8 @@
                 <div id='hospitalized'>
                     <ul>입원일자</ul>
                     <ul>
-                        <li>어머님 전대병원 입원기간 : <span>{{ cnuh_3.days }}</span>일.({{ cnuh_1|timesince }} &nbsp;전), 2017.06월26일(월) ~ 2017.08.28(월). </li>       
-                        <li>에스웰 요양병원 : <span>1</span>일. 2017.08.28(월) ~ 2017.08.29(화), </li>                                     
+                        <li>어머님 전대병원 입원기간 : 2017.06.26(월) ~ 2017.08.28(월), <span>{{ cnuh_3.days }}</span>일({{ cnuh_1|timesince }} &nbsp;전).  </li>
+                        <li>에스웰 요양병원 : <span>1</span>일. 2017.08.28(월) ~ 2017.08.29(화). </li>
                         <li>광주시립제2요양병원 : 2017.08.29일(화)부터 <span>{{ convalescentHospital_3.days }}</span> 일째. ({{ convalescentHospital_1|timesince }} &nbsp;전).</li>
                         <li>지금까지 <span>{{ hospitalization }}</span>일.</li>
                     </ul>
@@ -102,6 +102,10 @@
                         </li>   
                     </ul> 
                 </div>
+
+                <div>
+                    <img src="{% static 'images/sansu.png' %}" />
+                </div>
              {% endblock content1 %}
 
             </div><!-- col-xs-12 end -->
@@ -116,7 +120,6 @@
 
     {% block content2 %}
 
-
     {% endblock content2 %}
      
             
@@ -125,7 +128,8 @@
     </div><!-- class  container end-->
 
 
-    {% block footer %}    
+    {% block footer %}
+
     {% endblock footer %}
 
     {% block script %}
