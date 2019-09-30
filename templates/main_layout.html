@@ -101,10 +101,19 @@
                             {% endif %} 
                         </li>   
                     </ul> 
-                </div>
-                <br><br><br><br>
+                </div><br>
                 <div>
-                    <img src="{% static 'images/sansu.png' %}" />
+                    <p><b>- 결혼식 정보</b></p>
+                    <ul>
+                        <li>{{sanha}}</li>
+                        <li>{{sua}}</li>
+                    </ul>
+                </div>
+                <br><br><br>
+                <div>
+                    <p>SANSU QR Code
+                        <img src="{% static 'images/sansu.png' %}" title="sansu qrcode" alt='qr code' width='200px'  />
+                    </p>
                 </div>
              {% endblock content1 %}
 

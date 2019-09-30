@@ -30,12 +30,24 @@ class SansuTemplateView(TemplateView):
 
         if self.annivarsary > today:
             self.kkk = self.annivarsary - today
-            self.kkk = "{.days}일 남았습니다".format(self.kkk)
+            self.kkk = "{day.days}일 남았습니다".format(day  = self.kkk)
         elif self.annivarsary == today:
             self.kkk = '{}일 오늘은 안과 진료일입니다'.format(today)
         else:
             self.kkk = today - self.annivarsary
             self.kkk = '{.days}일 지났습니다'.format(self.kkk)
+        return self.kkk
+
+    def wedding(self, annivarsary, name = None):
+        today = date.today()
+        self.name = name
+        self.annivarsary = annivarsary
+
+        if self.annivarsary > today:
+            self.kkk = self.annivarsary - today
+            self.kkk = "{name} 결혼식({annivarsary})이  {day.days}일 남았습니다.".format(name=self.name, annivarsary=self.annivarsary, day=self.kkk)
+        elif self.annivarsary == today:
+            self.kkk = '{today}일 오늘은 {name} 결혼일입니다.'.format(today = today, name = self.name)
         return self.kkk
 
     # 기념일 계산 제너레이터
@@ -56,6 +68,20 @@ class SansuTemplateView(TemplateView):
         # 생일
         context['birthday'] = self.birthday()
 
+        # 안과 예약 날자 함수 호출
+        context['ophthalmology'] = self.ophthalmology(annivarsary=date(2019, 12, 13))
+
+        # 산하, 수아 결혼식 날자 계산
+        context['sanha'] = self.wedding(annivarsary=date(2019, 10, 26), name='이산하')
+        context['sua'] = self.wedding(annivarsary=date(2019, 11, 7), name='이수아')
+
+
+        # 기념일
+        anni = date(2018, 1, 10)
+        ann = date(2018, 1, 10)
+        context['anni'] = anni
+        context['ann'] = ann
+
         # 전대병원 입원기간
         cnuh_1 = date(2017,6,26)
         cnuh_2 = date(2017,8,28)
@@ -65,9 +91,7 @@ class SansuTemplateView(TemplateView):
         context['cnuh_3'] = cnuh_2 - cnuh_1
         context['cnuh_1'] = cnuh_1
 
-        # 안과 예약 날자 함수 호출
-        context['ophthalmology'] = self.ophthalmology(date(2019, 12, 13))
-        #context['ophthalmology'] = self.ophthalmology(date(2019, 6, 21))
+
         
        # 요양병원 입원일수 아래것이 단순함.
         convalescentHospital_1 = date(2017,8,29)
@@ -120,12 +144,6 @@ class SansuTemplateView(TemplateView):
         context['op_444'] = op_444  # 지났습니다.
 
 
-
-        # 기념일 
-        anni = date(2018,1,10)
-        ann = date(2018,1,10)
-        context['anni'] = anni
-        context['ann'] = ann
         return context
 
 
