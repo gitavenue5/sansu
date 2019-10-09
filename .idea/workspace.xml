@@ -12,7 +12,7 @@
     <session id="700561954">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="109" />
+          <entry key="project.closed" value="112" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
@@ -21,9 +21,9 @@
           <entry key="project.open.time.14" value="5" />
           <entry key="project.open.time.15" value="12" />
           <entry key="project.open.time.16" value="19" />
-          <entry key="project.open.time.17" value="17" />
+          <entry key="project.open.time.17" value="18" />
           <entry key="project.open.time.18" value="18" />
-          <entry key="project.open.time.19" value="8" />
+          <entry key="project.open.time.19" value="9" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.20" value="8" />
           <entry key="project.open.time.21" value="5" />
@@ -34,7 +34,7 @@
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="112" />
+          <entry key="project.opened" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -61,7 +61,7 @@
           <entry key="css" value="928" />
           <entry key="html" value="4810" />
           <entry key="js" value="526" />
-          <entry key="py" value="18962" />
+          <entry key="py" value="19319" />
           <entry key="txt" value="277" />
         </counts>
       </usages-collector>
@@ -71,7 +71,7 @@
           <entry key="HTML" value="4810" />
           <entry key="JavaScript" value="526" />
           <entry key="PLAIN_TEXT" value="277" />
-          <entry key="Python" value="18977" />
+          <entry key="Python" value="19334" />
         </counts>
       </usages-collector>
     </session>
@@ -83,8 +83,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+                <state relative-caret-position="136">
+                  <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -129,7 +129,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/family_site/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1261">
+                <state relative-caret-position="1210">
                   <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
                   <folding>
                     <element signature="e#2#88#0" expanded="true" />
@@ -138,10 +138,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/family/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
+                <state relative-caret-position="660">
                   <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
                 </state>
               </provider>
@@ -156,11 +156,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://D:/python_test_directory/test1.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="24" selection-start-line="24" selection-end-line="24" />
+                <state relative-caret-position="396">
+                  <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
                   <folding>
                     <element signature="e#19#139#0" expanded="true" />
                   </folding>
@@ -209,9 +209,9 @@
         <option value="$PROJECT_DIR$/family_site/static/family_site/js/wrbank/wrbank.js" />
         <option value="$PROJECT_DIR$/family_site/views.py" />
         <option value="D:/testt/test1.py" />
-        <option value="D:/python_test_directory/test1.py" />
         <option value="$PROJECT_DIR$/family/views.py" />
         <option value="$PROJECT_DIR$/templates/main_layout.html" />
+        <option value="D:/python_test_directory/test1.py" />
       </list>
     </option>
   </component>
@@ -226,7 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,6 +271,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -417,14 +417,14 @@
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1427784" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14608599" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.07281001" />
-      <window_info anchor="bottom" x="634" y="768" width="982" height="298" id="Run" order="2" type="WINDOWED" weight="0.3578709" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.51995564" />
+      <window_info anchor="bottom" x="802" y="669" width="982" height="298" id="Run" order="2" type="WINDOWED" weight="0.3578709" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.51975054" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952183" />
@@ -455,6 +455,11 @@
           <url>file://$PROJECT_DIR$/family_site/views.py</url>
           <line>172</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://D:/python_test_directory/test1.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -627,6 +632,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/wrbank/wrbank_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -651,26 +666,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/Lib/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7656">
-          <caret line="350" selection-start-line="350" selection-end-line="350" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/python_test_directory/test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#19#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/family_site/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1261">
+        <state relative-caret-position="1210">
           <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
           <folding>
             <element signature="e#2#88#0" expanded="true" />
@@ -680,17 +678,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/family/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="660">
           <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
+    <entry file="file://D:/Anaconda3/Lib/json/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+        <state relative-caret-position="7656">
+          <caret line="350" selection-start-line="350" selection-end-line="350" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python_test_directory/test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#19#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
