@@ -12,29 +12,29 @@
     <session id="700561954">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="112" />
+          <entry key="project.closed" value="116" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="5" />
-          <entry key="project.open.time.15" value="12" />
-          <entry key="project.open.time.16" value="19" />
-          <entry key="project.open.time.17" value="18" />
+          <entry key="project.open.time.15" value="13" />
+          <entry key="project.open.time.16" value="21" />
+          <entry key="project.open.time.17" value="19" />
           <entry key="project.open.time.18" value="18" />
           <entry key="project.open.time.19" value="9" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.20" value="8" />
           <entry key="project.open.time.21" value="5" />
-          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="3" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="114" />
+          <entry key="project.opened" value="119" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,7 +42,7 @@
           <entry key="css" value="5" />
           <entry key="html" value="22" />
           <entry key="js" value="8" />
-          <entry key="py" value="41" />
+          <entry key="py" value="43" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
@@ -52,7 +52,7 @@
           <entry key="HTML" value="22" />
           <entry key="JavaScript" value="8" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="40" />
+          <entry key="Python" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -61,7 +61,7 @@
           <entry key="css" value="928" />
           <entry key="html" value="4810" />
           <entry key="js" value="526" />
-          <entry key="py" value="19319" />
+          <entry key="py" value="19420" />
           <entry key="txt" value="277" />
         </counts>
       </usages-collector>
@@ -71,20 +71,20 @@
           <entry key="HTML" value="4810" />
           <entry key="JavaScript" value="526" />
           <entry key="PLAIN_TEXT" value="277" />
-          <entry key="Python" value="19334" />
+          <entry key="Python" value="19435" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5041801">
+    <splitter split-orientation="horizontal" split-proportion="0.5488918">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+                <state relative-caret-position="543">
+                  <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -138,29 +138,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/family/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="660">
-                  <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+                  <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://D:/Anaconda3/Lib/json/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7656">
-                  <caret line="350" selection-start-line="350" selection-end-line="350" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://D:/python_test_directory/test1.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+                <state relative-caret-position="30">
+                  <caret line="23" selection-start-line="23" selection-end-line="23" />
                   <folding>
                     <element signature="e#19#139#0" expanded="true" />
                   </folding>
@@ -209,9 +200,9 @@
         <option value="$PROJECT_DIR$/family_site/static/family_site/js/wrbank/wrbank.js" />
         <option value="$PROJECT_DIR$/family_site/views.py" />
         <option value="D:/testt/test1.py" />
+        <option value="D:/python_test_directory/test1.py" />
         <option value="$PROJECT_DIR$/family/views.py" />
         <option value="$PROJECT_DIR$/templates/main_layout.html" />
-        <option value="D:/python_test_directory/test1.py" />
       </list>
     </option>
   </component>
@@ -226,6 +217,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,7 +263,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -417,23 +408,23 @@
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14608599" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15435502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.07281001" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.07281001" />
       <window_info anchor="bottom" x="802" y="669" width="982" height="298" id="Run" order="2" type="WINDOWED" weight="0.3578709" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.51975054" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43762994" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952183" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32952183" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32744282" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.35381114" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.35343036" />
       <window_info anchor="bottom" id="DB Execution Console" order="11" />
-      <window_info anchor="bottom" id="Graph Database Console" order="12" />
+      <window_info anchor="bottom" id="Graph Database Console" order="12" weight="0.32952183" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -458,8 +449,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://D:/python_test_directory/test1.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="8" />
+          <line>18</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -473,6 +464,11 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="schedule[0]" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/family_site/test_1.py" />
@@ -632,13 +628,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
+    <entry file="file://D:/Anaconda3/Lib/json/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="7656">
+          <caret line="350" selection-start-line="350" selection-end-line="350" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
         </state>
       </provider>
     </entry>
@@ -676,26 +683,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/python_test_directory/test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#19#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/family/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
-          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/Lib/json/__init__.py">
+    <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7656">
-          <caret line="350" selection-start-line="350" selection-end-line="350" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/python_test_directory/test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="543">
+          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
           <folding>
-            <element signature="e#19#139#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

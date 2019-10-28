@@ -38,6 +38,7 @@ class SansuTemplateView(TemplateView):
             self.kkk = '{.days}일 지났습니다'.format(self.kkk)
         return self.kkk
 
+    # 가족 웨딩 기념일
     def wedding(self, annivarsary, name = None):
         today = date.today()
         self.name = name
@@ -72,7 +73,6 @@ class SansuTemplateView(TemplateView):
         context['ophthalmology'] = self.ophthalmology(annivarsary=date(2019, 12, 13))
 
         # 산하, 수아 결혼식 날자 계산
-        context['sanha'] = self.wedding(annivarsary=date(2019, 10, 26), name='이산하')
         context['sua'] = self.wedding(annivarsary=date(2019, 11, 7), name='이수아')
 
 
