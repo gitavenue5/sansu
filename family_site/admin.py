@@ -9,6 +9,8 @@ from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment
 # 날마다
 class DailyAdmin(SummernoteModelAdmin):
     summer_note_fields = ('content', )
+    list_display = ('id', 'daily_date', 'daily_content')
+    list_display_links = ('id', 'daily_date', 'daily_content')
 admin.site.register(Daily, DailyAdmin)
 
 # 기념일
