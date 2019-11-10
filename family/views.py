@@ -73,7 +73,7 @@ class SansuTemplateView(TemplateView):
         context['ophthalmology'] = self.ophthalmology(annivarsary=date(2019, 12, 13))
 
         # 산하, 수아 결혼식 날자 계산
-        context['sua'] = self.wedding(annivarsary=date(2019, 11, 9), name='이수아')
+        #context['sua'] = self.wedding(annivarsary=date(2019, 11, 9), name='이수아')
 
 
         # 기념일
