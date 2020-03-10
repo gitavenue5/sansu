@@ -86,8 +86,14 @@ h4 {
 }
 
 
+#qrcode > ul:nth-child(1) {
+    border-left: 3px solid green;
+    padding-left: 10px;
+}
 
-
+#qrcode > ul > li {
+    list-style: none;
+}
 
 
 

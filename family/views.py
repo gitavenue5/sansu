@@ -124,19 +124,29 @@ class SansuTemplateView(TemplateView):
 
 
         
-       # 요양병원 입원일수 아래것이 단순함.
+       # 광주시립제2요양병원 입원일수 아래것이 단순함.
         convalescentHospital_1 = date(2017,8,29)
-        convalescentHospital_2 = date.today()
+        #convalescentHospital_2 = date.today() 화순군립요양원으로 옮기심.
+        convalescentHospital_2 = date(2020,2,25)
         convalescentHospital_3 = convalescentHospital_2 - convalescentHospital_1
         # 입원기간
         context['convalescentHospital_3'] = convalescentHospital_2 - convalescentHospital_1
         # 몇개월 전
         context['convalescentHospital_1'] = convalescentHospital_1
 
+        # 화순군립요양병원 입원일수
+        hoasun_nursing_home_1 = date(2020,2,24)  ######## 25일이 아니라 24일 날자에 -1을 해줘야 정확한 날자 가 나온다
+                                                 ######## 단 오늘은 진료일입니다는 해당사항이 없다. 그날 날자로 25일로
+        hoasun_nursing_home_2 = date.today()
+        hoasun_nursing_home_sum = hoasun_nursing_home_2 - hoasun_nursing_home_1
+        context['hoasun_nursing_home_sum'] = hoasun_nursing_home_sum
+
         # 총 입원일
-        context['hospitalization'] = (cnuh_3 + convalescentHospital_3).days + 1     # timedelt(days=1) 를 사용할때 .days + 1 를 대신해서 사용
-       
-       # 병원 진료 예약일
+        context['hospitalization'] = (date.today() - date(2017,6,26)).days + 1     # timedelt(days=1) 를 사용할때 .days + 1 를 대신해서 사용
+                                                                                       # days+1 일은 에스웰 요양병원 1일치 더한기 한것
+        # 총 입원일 년으로 계산하기 timesince
+        context['hospitalization_timesince'] = date(2017,6,26) # timesince 사용할때는 반드시 date(2017,2,22) 이런 형식으로 상용. 다르게 사용하면 에러난다.
+        # 병원 진료 예약일
 
        # 신경외과
         neurosurgery_1 = date(2018,4,26)
