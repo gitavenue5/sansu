@@ -12,7 +12,7 @@
     <session id="700561954">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="142" />
+          <entry key="project.closed" value="143" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="2" />
@@ -62,7 +62,7 @@
           <entry key="css" value="1000" />
           <entry key="html" value="5287" />
           <entry key="js" value="526" />
-          <entry key="py" value="20998" />
+          <entry key="py" value="21007" />
           <entry key="txt" value="277" />
         </counts>
       </usages-collector>
@@ -72,7 +72,7 @@
           <entry key="HTML" value="5287" />
           <entry key="JavaScript" value="526" />
           <entry key="PLAIN_TEXT" value="277" />
-          <entry key="Python" value="21013" />
+          <entry key="Python" value="21022" />
         </counts>
       </usages-collector>
     </session>
@@ -137,7 +137,7 @@
             <entry file="file://$PROJECT_DIR$/family/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="455">
-                  <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+                  <caret line="66" column="31" lean-forward="true" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -713,7 +713,7 @@
     <entry file="file://$PROJECT_DIR$/family/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
-          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+          <caret line="66" column="31" lean-forward="true" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
