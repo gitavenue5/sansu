@@ -142,8 +142,8 @@ class SansuTemplateView(TemplateView):
         context['hoasun_nursing_home_sum'] = hoasun_nursing_home_sum
 
         # 코로나19로 인해 화순군립요양병원에서 광주제2시립요양병원으로 옮기심.
-        gw2_nursing_home_1 = date(2020, 5, 26)  ######## 25일이 아니라 24일 날자에 -1을 해줘야 정확한 날자 가 나온다
-                                                    ######## 단 오늘은 진료일입니다는 해당사항이 없다. 그날 날자로 25일로
+        gw2_nursing_home_1 = date(2020, 5, 25)  ######## 26일이 아니라 25일 날자에 -1을 해줘야 정확한 날자 가 나온다
+                                                    ######## 단 오늘은 진료일입니다는 해당사항이 없다. 그날 날자로 26일로
         gw2_nursing_home_2 = date.today()
         gw2_nursing_home_sum = gw2_nursing_home_2 - gw2_nursing_home_1
         context['gw2_nursing_home_sum'] = gw2_nursing_home_sum

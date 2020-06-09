@@ -12,7 +12,7 @@
     <session id="700561954">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="143" />
+          <entry key="project.closed" value="144" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="2" />
@@ -62,7 +62,7 @@
           <entry key="css" value="1000" />
           <entry key="html" value="5344" />
           <entry key="js" value="526" />
-          <entry key="py" value="21104" />
+          <entry key="py" value="21109" />
           <entry key="txt" value="277" />
         </counts>
       </usages-collector>
@@ -72,13 +72,13 @@
           <entry key="HTML" value="5344" />
           <entry key="JavaScript" value="526" />
           <entry key="PLAIN_TEXT" value="277" />
-          <entry key="Python" value="21119" />
+          <entry key="Python" value="21124" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5445545">
+    <splitter split-orientation="horizontal" split-proportion="0.35448006">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -151,8 +151,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/family/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="477">
-                  <caret line="139" column="44" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
+                <state relative-caret-position="543">
+                  <caret line="145" column="94" selection-start-line="145" selection-start-column="94" selection-end-line="145" selection-end-column="94" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -233,8 +233,8 @@
         <option value="$PROJECT_DIR$/family_site/views.py" />
         <option value="$PROJECT_DIR$/family_site/templates/family_site/anniversary/anniversary_list.html" />
         <option value="$PROJECT_DIR$/static/css/main_layout.css" />
-        <option value="$PROJECT_DIR$/family/views.py" />
         <option value="$PROJECT_DIR$/templates/main_layout.html" />
+        <option value="$PROJECT_DIR$/family/views.py" />
       </list>
     </option>
   </component>
@@ -736,16 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/family/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="139" column="44" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -764,6 +754,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/daily/daily_list.html">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/family/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="145" column="94" selection-start-line="145" selection-start-column="94" selection-end-line="145" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
