@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67f44615-2f4f-4e11-97be-02501c86f080" name="Default Changelist" comment="" />
+    <list default="true" id="67f44615-2f4f-4e11-97be-02501c86f080" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2020_aniversary_note.bin" beforeDir="false" afterPath="$PROJECT_DIR$/2020_aniversary_note.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/family_site/templates/family_site/daily/daily_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/family_site/templates/family_site/daily/daily_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gw_bank.ods" beforeDir="false" afterPath="$PROJECT_DIR$/gw_bank.ods" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,11 +18,11 @@
     <session id="700561954">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="144" />
+          <entry key="project.closed" value="146" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="5" />
           <entry key="project.open.time.15" value="13" />
@@ -26,7 +32,7 @@
           <entry key="project.open.time.19" value="13" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.20" value="11" />
-          <entry key="project.open.time.21" value="6" />
+          <entry key="project.open.time.21" value="7" />
           <entry key="project.open.time.22" value="5" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="3" />
@@ -35,7 +41,7 @@
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="146" />
+          <entry key="project.opened" value="148" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -76,6 +82,14 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="185072520">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.35448006">
@@ -84,8 +98,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="88">
-                  <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -95,7 +109,11 @@
           </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/daily/daily_list.html">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -111,7 +129,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/wrbank/wrbank_list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
+                <state relative-caret-position="425">
                   <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
                   <folding>
                     <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -123,7 +141,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/family_site/admin.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
+                <state relative-caret-position="119">
                   <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
@@ -139,7 +157,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/family_site/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3080">
+                <state relative-caret-position="2380">
                   <caret line="160" column="51" selection-start-line="160" selection-start-column="51" selection-end-line="160" selection-end-column="51" />
                   <folding>
                     <element signature="e#2#88#0" expanded="true" />
@@ -151,7 +169,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/family/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="543">
+                <state relative-caret-position="878">
                   <caret line="145" column="94" selection-start-line="145" selection-start-column="94" selection-end-line="145" selection-end-column="94" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
@@ -163,7 +181,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/css/main_layout.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1738">
+                <state relative-caret-position="1343">
                   <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
                 </state>
               </provider>
@@ -172,20 +190,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/aniversary_binary.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="88">
+                <state relative-caret-position="68">
                   <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://D:/python_test_directory/test1.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="20" selection-start-line="20" selection-end-line="20" />
-                  <folding>
-                    <element signature="e#19#139#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -235,12 +241,13 @@
         <option value="$PROJECT_DIR$/static/css/main_layout.css" />
         <option value="$PROJECT_DIR$/templates/main_layout.html" />
         <option value="$PROJECT_DIR$/family/views.py" />
+        <option value="$PROJECT_DIR$/family_site/templates/family_site/daily/daily_list.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="146" />
-    <option name="y" value="36" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1781" />
+    <option name="y" value="719" />
     <option name="width" value="1692" />
     <option name="height" value="924" />
   </component>
@@ -434,10 +441,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="66" y="-8" width="1862" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15711136" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16008772" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -501,26 +508,14 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/family_site/test_1.py" />
-    <entry file="file://D:/Anaconda3/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4309">
-          <caret line="594" column="8" selection-start-line="594" selection-start-column="8" selection-end-line="594" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda3/Lib/site-packages/django/db/models/base.py" />
     <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/note/note_create.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/family_site/forms.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://D:/Anaconda3/Lib/site-packages/django/conf/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda3/Lib/site-packages/django/conf/__init__.py" />
     <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/gwbank/gwbank_create.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -578,20 +573,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="219" selection-start-line="219" selection-end-line="219" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/Lib/json/decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="338" selection-start-line="338" selection-end-line="338" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda3/Lib/random.py" />
+    <entry file="file://D:/Anaconda3/Lib/json/decoder.py" />
     <entry file="file://$PROJECT_DIR$/family_site/static/family_site/js/wrbank/wrbank.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1232">
@@ -599,44 +582,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/testt/testt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="e#20#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/Lib/abc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3256">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/testt/test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="310" selection-start-line="310" selection-end-line="310" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/Lib/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7656">
-          <caret line="350" selection-start-line="350" selection-end-line="350" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/testt/testt.py" />
+    <entry file="file://D:/Anaconda3/Lib/abc.py" />
+    <entry file="file://D:/testt/test1.py" />
+    <entry file="file://D:/Anaconda3/Lib/codecs.py" />
+    <entry file="file://D:/Anaconda3/Lib/json/__init__.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -682,9 +632,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/python_test_directory/test1.py" />
+    <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/daily/daily_detail.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/daily/daily_create.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/wrbank/wrbank_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
+        <state relative-caret-position="425">
           <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -694,7 +661,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/family_site/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="119">
           <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -704,7 +671,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/family_site/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3080">
+        <state relative-caret-position="2380">
           <caret line="160" column="51" selection-start-line="160" selection-start-column="51" selection-end-line="160" selection-end-column="51" />
           <folding>
             <element signature="e#2#88#0" expanded="true" />
@@ -714,54 +681,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main_layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1738">
+        <state relative-caret-position="1343">
           <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aniversary_binary.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
+        <state relative-caret-position="68">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/python_test_directory/test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#19#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/daily/daily_create.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/daily/daily_detail.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/daily/daily_list.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/family/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
+        <state relative-caret-position="878">
           <caret line="145" column="94" selection-start-line="145" selection-start-column="94" selection-end-line="145" selection-end-column="94" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/daily/daily_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
