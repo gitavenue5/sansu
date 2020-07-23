@@ -91,7 +91,10 @@ class SansuTemplateView(TemplateView):
                 time = datetime.datetime.strptime(str(value), '%Y-%m-%d').date()
 
                 if (today == time):
-                    yield "{name}".format(name = a[key])
+                    yield "" \
+                          "".format(name = a[key])
+
+
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)

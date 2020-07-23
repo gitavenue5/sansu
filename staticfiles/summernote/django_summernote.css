@@ -1,7 +1,8 @@
-html, body {
-    margin: 0;
+.summernote-div {
+  display: inline-block;
+  position: relative;
 }
 
-.note-editor {
-    margin-bottom: 0;
+form .summernote-div .dropdown-menu {
+  margin-left: 0;
 }

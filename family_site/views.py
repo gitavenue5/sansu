@@ -10,12 +10,16 @@ from django.utils.decorators import method_decorator
 import pandas
 
 from datetime import date, datetime, timedelta
-
+from django.http import HttpResponse, JsonResponse
 
 from django.db.models import Q, F, Sum, Count, Case, When
 
+
+
 #from django.contrib.auth.models import User
 from rest_framework import viewsets
+
+import pickle, datetime
 
 from . serializers import AnniversarySerializer, GwBankSerializer, WrBankSerializer
 
@@ -310,8 +314,87 @@ class NoteCommentDeleteView(LoginRequiredMixin, DeleteView):
     def get_success_url(self):
         return resolve_url(self.object.note)
 
-    
-   
+
+class KakaoView(TemplateView):
+    template_name = "family_site/kakao/kakao.html"
+
+    def kakao_aniversary(self):
+        with open('2020_kakao_birthday.bin', 'wb') as ff:
+            kakao_names = {
+                "임수정님 생일을 축하합니다": "2020-01-03",
+                "이여혜님 생일을 축하합니다": "2020-01-10",
+                "오늘은 아버님 기일입니다": "2020-01-14",
+                "설 날": "2020-01-25",
+                "강선구님 생일을 축하합니다": "2020-01-29",
+                "이채순님 생일을 축하합니다": "2020-02-12",
+                "이수아님 생일을 축하합니다": "2020-02-13",
+                "이정순님 생일을 축하합니다": "2020-02-27",
+                "박영은님 생일을 축하합니다": "2020-03-18",
+                "어머님 생신을 축하드립니다": "2020-03-25",
+                "김홍석님 생일을 축하합니다": "2020-04-06",
+                "이돈철님 생일을 축하합니다": "2020-04-29",
+                "김호중님 생일을 축하합니다": "2020-05-10",
+                "이다선님 생일을 축하합니다": "2020-05-14",
+                "이민경님 생일을 축하합니다": "2020-07-04",
+                "김보민님 생일을 축하합니다": "2020-07-12",
+                "이화순님 생일을 축하합니다": "2020-07-16",
+                "eeeeeeeeeeeeeee 생일을 축하합니다": "2020-07-17",
+                "이기창님 생일을 축하합니다": "2020-08-11",
+                "이상순님 생일을 축하합니다": "2020-09-16",
+                "추 석": "2020-10-01",
+                "이산하님 생일을 축하합니다": "2020-10-19",
+                "이기영님 생일을 축하합니다": "2020-10-26",
+                "이기정님 생일을 축하합니다": "2020-12-13",
+            }
+            pickle.dump(kakao_names, ff)
+
+        with open('2020_kakao_birthday.bin', 'rb') as f:
+            a = pickle.load(f)
+            today = datetime.date.today()
+
+            for key, value in a.items():
+                a[key] = key
+                time = datetime.datetime.strptime(str(value), '%Y-%m-%d').date()
+
+                if (today == time):
+                    yield "{kakao_name}".format(kakao_name=a[key])
+
+
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["kakao_name"] = self.kakao_aniversary()
+
+        return context
+
+
+
+
+def p(request):
+    return JsonResponse({
+        'message' : '안녕 파이썬 장고',
+        'items' : ['파이썬', '장고', 'AWS', 'Azure'],
+    }, json_dumps_params = {'ensure_ascii': True})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

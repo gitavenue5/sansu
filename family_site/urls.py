@@ -36,7 +36,11 @@ urlpatterns = [
     url(r'^notecomment_delete/(?P<note_pk>\d+)/(?P<pk>\d+)/$', views.NoteCommentDeleteView.as_view(), name='notecomment_delete'),
     
    
-    
+    # 카카오
+
+    url(r'kakao/$', views.KakaoView.as_view(), name='kakao_aniversary'),
+
+    url(r'p/$', views.p, name='kakao'),
     
 ]
 
