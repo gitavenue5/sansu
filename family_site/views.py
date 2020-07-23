@@ -19,7 +19,7 @@ from django.db.models import Q, F, Sum, Count, Case, When
 #from django.contrib.auth.models import User
 from rest_framework import viewsets
 
-import pickle, datetime
+import pickle
 
 from . serializers import AnniversarySerializer, GwBankSerializer, WrBankSerializer
 
@@ -76,8 +76,8 @@ class AnniversaryListView(ListView):
         #anniver = anni.strftime('%Y-%m-%d') 이렇게 문자열화 하면 에러난다
         context['a'] = anni
         b = date.today()
-        
         context['c'] = repr(b)        
+
         f = datetime.strptime('2018-04-17', '%Y-%m-%d')
         context['ff'] = str(f)[:-1]
 
