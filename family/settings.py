@@ -14,24 +14,15 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '1r.WvABj;1~st$IiZ)l83+#J+1tl`!5-gg>lKtvG&+qPsLhuy-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True # True 는 에러 페이지가 표시된다. 배포시는 False로
               # False 로 하면 admin page가 제대로 나오지 않는다. 깨져서 나옴.
 
-
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'family_site',
 
     'rest_framework',
@@ -47,8 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'crispy_forms',
     'django_summernote',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    'allauth.socialaccount.providers.kakao',
+    'allauth.socialaccount.providers.daum',
+    'allauth.socialaccount.providers.naver',
 ]
 
+#SITE_ID = 1
+SITE_ID = 2
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -96,8 +98,6 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -115,9 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/1.11/topics/i18n/
-
 #LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'ko-kr'
 
@@ -130,16 +127,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-#REST_FRAMEWORK = {
- #   'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-  #  'PAGINATE_BY': 10,
-   # 'PAGE_SIZE': 10
-#}
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
@@ -149,15 +142,37 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-LOGIN_URL = "/accounts/login/" 
-LOGOUT_URL = '/accounts/logout/' 
-
-LOGIN_REDIRECT_URL = "/note_list/" 
-
 AUTH_USER_MODEL = 'auth.User'
+
+# LOGIN_URL = "/accounts/login/"
+LOGOUT_URL = '/accounts/logout/'
+
+#LOGIN_REDIRECT_URL = "/"
+
+#LOGOUT_REDIRECT_URL = '/'
+
+# LOGIN_REDIRECT_URL = "http://localhost:8000/accounts/kakao/login/callback/"
+
+
+
+LOGIN_REDIRECT_URL = '/' # 로그인 후 리디렉션할 페이지
+ACCOUNT_LOGOUT_REDIRECT_URL = "/"  # 로그아웃 후 리디렉션 할 페이지
+ACCOUNT_LOGOUT_ON_GET = True # 로그아웃 버튼 클릭 시 자동 로그아웃
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 
 DATETIME_FORMATS=('%Y-%m-%d %H:%M',)
+
+
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+#Specifies the login method to use – whether the user logs in by entering their username, e-mail address, or either one of both. Setting this to “email” requires ACCOUNT_EMAIL_REQUIRED=True
+
+
+
+
+
+
+

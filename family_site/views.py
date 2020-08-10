@@ -380,7 +380,14 @@ def p(request):
 
 
 
+class kakaoLoginTemplateView(TemplateView):
+    template_name = 'family_site/kakao/kakao_login.html'
 
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+
+
+        return context
 
 
 

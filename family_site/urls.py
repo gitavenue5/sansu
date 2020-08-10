@@ -1,10 +1,12 @@
 
 from django.conf.urls import url
 
+
 from . import views
 
 
 urlpatterns = [
+
 
     # daily urls
     url(r'^daily_create/$', views.DailyCreateView.as_view(), name='daily_create'),
@@ -36,11 +38,8 @@ urlpatterns = [
     url(r'^notecomment_delete/(?P<note_pk>\d+)/(?P<pk>\d+)/$', views.NoteCommentDeleteView.as_view(), name='notecomment_delete'),
     
    
-    # 카카오
+    # 카카오 로그인
 
-    url(r'kakao/$', views.KakaoView.as_view(), name='kakao_aniversary'),
-
-    url(r'p/$', views.p, name='kakao'),
-    
+    url(r'^login/$', views.kakaoLoginTemplateView.as_view(), name='kakao_login'),
 ]
 

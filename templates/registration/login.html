@@ -4,22 +4,31 @@
 {% block stylesheet %} {% endblock stylesheet %}
 
 {% block content1 %}
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6">
             
+            <!--<div>-->
+                <!--<h2>로그인</h2>-->
+            <!--</div>-->
+
+            <!--<div>    -->
+                <!--<form action='' method='post'>{% csrf_token %} -->
+                    <!--{{ form|crispy }}             -->
+                    <!--<input class="btn btn-primary" type="submit" value="로그인" />   -->
+                    <!--<input type='hidden' name='next' value="{{ next }}" />               -->
+                 <!--</form>-->
+            <!--</div>-->
+
             <div>
-                <h2>로그인</h2>
+                 <button type="button" style="border:0; outline:0;" onclick="location.href='{% provider_login_url "kakao" method="oauth2" process="login"%}'"><img src="{% static 'images/kakao_login_medium_narrow.png' %}" alt=""></button>
             </div>
-    
-            <form action='' method='post'>{% csrf_token %}  
-                {{ form|crispy }}              
-                <input class="btn btn-primary" type="submit" value="로그인" />   
-                <input type='hidden' name='next' value="{{ next }}" />                 
-            </form>
-            
+
         </div>
     </div>
 </div>
+
+
 {% endblock content1 %}
 

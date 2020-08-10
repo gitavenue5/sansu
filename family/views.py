@@ -5,13 +5,14 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.urlresolvers import reverse_lazy
 
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.http.response import StreamingHttpResponse
 import os, sys, pandas, cgi
 from openpyxl import load_workbook
 from IPython.display import HTML
 from PIL import Image
 import numpy as np
+
 
 from datetime import datetime, date, timedelta
 import datetime, pickle
@@ -208,3 +209,12 @@ class UserCreateView(CreateView):
 # 회원가입 완료 함수
 class UserCreateDoneTemplateView(TemplateView):
     template_name = 'registration/register_done.html'
+
+
+
+# 테스트 지을것 카카오 로그인
+class kakaologin(TemplateView):
+    def get(self, request):
+        code = request.GET.get('code')
+        return HttpResponse({code})
+
