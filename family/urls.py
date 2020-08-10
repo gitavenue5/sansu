@@ -21,7 +21,7 @@ router.register(r'wrbank_api', WrBankViewSet)
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
-    url(r'^accounts/', include('allauth.urls')),
+    # url(r'^accounts/', include('allauth.urls')),
 
 
     # serializer

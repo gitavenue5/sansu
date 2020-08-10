@@ -44,9 +44,9 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 
-    'allauth.socialaccount.providers.kakao',
-    'allauth.socialaccount.providers.daum',
-    'allauth.socialaccount.providers.naver',
+    # 'allauth.socialaccount.providers.kakao',
+    # 'allauth.socialaccount.providers.daum',
+    # 'allauth.socialaccount.providers.naver',
 ]
 
 #SITE_ID = 1
