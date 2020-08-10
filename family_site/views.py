@@ -78,7 +78,7 @@ class AnniversaryListView(ListView):
         b = date.today()
         
         context['c'] = repr(b)        
-        f = datetime('2018-04-17', '%Y-%m-%d')
+        f = datetime.datetime('2018-04-17', '%Y-%m-%d')
         context['ff'] = str(f)[:-1]
 
        
