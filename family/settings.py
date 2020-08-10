@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_summernote',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
 
     # 'allauth.socialaccount.providers.kakao',
     # 'allauth.socialaccount.providers.daum',
@@ -128,10 +128,10 @@ USE_L10N = True
 USE_TZ = True
 
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+#     'allauth.account.auth_backends.AuthenticationBackend',
+# ]
 
 
 STATIC_URL = '/static/'
