@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'family_site',
 
     'rest_framework',
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 ]
 
 #SITE_ID = 1
-SITE_ID = 2
+# SITE_ID = 2
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
