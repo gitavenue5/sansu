@@ -116,7 +116,7 @@ class Note(models.Model):
 # 게시판 댓글
 class NoteComment(models.Model):
     note = models.ForeignKey(Note, on_delete=models.CASCADE, related_name='comments')
-    notecomment_author = models.ForeignKey(settings.AUTH_USER_MODEL)
+    notecomment_author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     notecomment_content = models.TextField('글내용')
     notecomment_created_date = models.DateTimeField('생성날자', auto_now_add=True, help_text='생성날자')
     notecomment_publish_date = models.DateTimeField('수정날자', auto_now=True, help_text='수정날자')

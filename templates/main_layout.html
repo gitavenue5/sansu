@@ -36,10 +36,14 @@
                 {% if user.is_active %}
                     <span class='welcome'>Welcome<strong>{% firstof user_get_short_name user.get_username  %}</strong>&nbsp;&nbsp;<a class='btn btn-default' href='{% url 'logout' %}'>로그아웃</a></span>
                 {% else %}                
-                    <span class='welcome'><a class='btn btn-default' href='{% url 'login' %}'>로그인</a>&nbsp;&nbsp;<a class='btn btn-default' href='{% url 'register' %}'>회원가입</a></span>
+                    <span class='welcome'>
+                        <a class='btn btn-default' href='{% url 'family_site:kakao_login' %}'>로그인</a>
+
+
+                    </span>
                 {% endif %}
-            </li>       
-        </ul>                        
+            </li>
+           </ul>
     </div><!-- nav-container-fluid end-->    
 
     <div class="container-fluid">
@@ -117,7 +121,8 @@
 
     {% block content2 %}
 
-    {% endblock content2 %}
+
+{% endblock content2 %}
      
             
             </div><!-- col-xs-12 end -->

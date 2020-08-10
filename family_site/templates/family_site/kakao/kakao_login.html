@@ -1,0 +1,24 @@
+{% extends 'main_layout.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block stylesheet %} {% static 'family_site/css/note/note_list.css' %} {% endblock stylesheet %}
+
+{% block content1 %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+<button type="button" style="border:0; outline:0;" onclick="location.href='{% provider_login_url "kakao" method="oauth2" process="login"%}'"><img src="{% static 'family_site/images/kakao/kakao_login_medium_narrow.png' %}" alt=""></button>&nbsp;&nbsp;
+<button type="button" style="border:0; outline:0;" onclick="location.href='{% provider_login_url "naver" method="oauth2" process="login"%}'"><img style="width:183px" src="{% static 'family_site/images/naver/네이버 아이디로 로그인_완성형_Green.png' %}" alt=""></button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content1 %}
+
+
+
+
