@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f44615-2f4f-4e11-97be-02501c86f080" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/family/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/family/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/family_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_site/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/family_site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/family_site/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woori_bank.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/woori_bank.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,28 +114,50 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44493672">
+    <splitter split-orientation="horizontal" split-proportion="0.32818294">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-442">
-                  <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+                <state relative-caret-position="612">
+                  <caret line="36" column="171" selection-start-line="36" selection-start-column="171" selection-end-line="36" selection-end-column="171" />
                   <folding>
+                    <element signature="e#1802#1808#0" expanded="true" />
+                    <element signature="e#1808#1814#0" expanded="true" />
+                    <element signature="e#2027#2033#0" expanded="true" />
+                    <element signature="e#2033#2039#0" expanded="true" />
+                    <element signature="e#2418#2424#0" expanded="true" />
+                    <element signature="e#2424#2430#0" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="e#3225#3231#0" expanded="true" />
+                    <element signature="e#3499#3505#0" expanded="true" />
+                    <element signature="e#5315#5321#0" expanded="true" />
+                    <element signature="e#5321#5327#0" expanded="true" />
+                    <element signature="e#5327#5333#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/family_site/urls.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/notecomment/notecomment_confirm_delete.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="28" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="73" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/family/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="170">
+                  <caret line="20" selection-start-line="20" selection-end-line="20" />
                   <folding>
-                    <element signature="e#1#33#0" expanded="true" />
+                    <element signature="e#2#43#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -152,8 +170,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/family/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="292">
-                  <caret line="102" column="25" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="25" />
+                <state relative-caret-position="2975">
+                  <caret line="193" column="44" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -162,25 +180,34 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/family_site/views.py">
+            <entry file="file://$PROJECT_DIR$/family/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/family_site/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="663">
-                  <caret line="387" lean-forward="true" selection-start-line="387" selection-end-line="387" />
+                  <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
                   <folding>
-                    <element signature="e#2#88#0" expanded="true" />
-                    <marker date="1594946520672" expanded="true" signature="10380:12056" ph="..." />
-                    <marker date="1594946520672" expanded="true" signature="12244:12245" ph="..." />
-                    <marker date="1594946520672" expanded="true" signature="12419:12447" ph="..." />
+                    <element signature="e#1#33#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/kakao/kakao.html">
+            <entry file="file://$PROJECT_DIR$/family_site/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" selection-start-line="8" selection-end-line="8" />
+                <state relative-caret-position="6052">
+                  <caret line="380" selection-start-line="380" selection-end-line="380" />
+                  <folding>
+                    <element signature="e#2#88#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -224,7 +251,6 @@
         <option value="$PROJECT_DIR$/family_site/static/family_site/js/wrbank/wrbank.js" />
         <option value="D:/testt/test1.py" />
         <option value="$PROJECT_DIR$/family_site/admin.py" />
-        <option value="$PROJECT_DIR$/family/settings.py" />
         <option value="D:/python_test_directory/test1.py" />
         <option value="$PROJECT_DIR$/family_site/templates/family_site/anniversary/anniversary_list.html" />
         <option value="$PROJECT_DIR$/static/css/main_layout.css" />
@@ -234,6 +260,7 @@
         <option value="$PROJECT_DIR$/family_site/templates/family_site/kakao/kakao.html" />
         <option value="$PROJECT_DIR$/family_site/views.py" />
         <option value="$PROJECT_DIR$/family_site/urls.py" />
+        <option value="$PROJECT_DIR$/family/settings.py" />
       </list>
     </option>
   </component>
@@ -270,6 +297,19 @@
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="family_site" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="family_site" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="family_site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="family_site" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -278,14 +318,6 @@
               <item name="family_site" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="family_site" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="family_site" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="family_site" type="462c0819:PsiDirectoryNode" />
-              <item name="gwbank" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
@@ -294,6 +326,34 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="family_site" type="462c0819:PsiDirectoryNode" />
               <item name="kakao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="family_site" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="family_site" type="462c0819:PsiDirectoryNode" />
+              <item name="notecomment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -442,8 +502,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="-8" width="1862" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13377193" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1129386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -606,8 +667,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/family/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3256">
-          <caret line="148" column="17" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
+        <state relative-caret-position="187">
+          <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -627,7 +688,14 @@
     </entry>
     <entry file="file://D:/python_test_directory/test1.py" />
     <entry file="file://$PROJECT_DIR$/family/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#2#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/family_site/templates/family_site/daily/daily_list.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -672,18 +740,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main_layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="612">
+          <caret line="36" column="171" selection-start-line="36" selection-start-column="171" selection-end-line="36" selection-end-column="171" />
           <folding>
+            <element signature="e#1802#1808#0" expanded="true" />
+            <element signature="e#1808#1814#0" expanded="true" />
+            <element signature="e#2027#2033#0" expanded="true" />
+            <element signature="e#2033#2039#0" expanded="true" />
+            <element signature="e#2418#2424#0" expanded="true" />
+            <element signature="e#2424#2430#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3225#3231#0" expanded="true" />
+            <element signature="e#3499#3505#0" expanded="true" />
+            <element signature="e#5315#5321#0" expanded="true" />
+            <element signature="e#5321#5327#0" expanded="true" />
+            <element signature="e#5327#5333#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/family/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="102" column="25" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="25" />
+        <state relative-caret-position="2975">
+          <caret line="193" column="44" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -699,21 +780,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/family_site/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="387" lean-forward="true" selection-start-line="387" selection-end-line="387" />
+        <state relative-caret-position="6052">
+          <caret line="380" selection-start-line="380" selection-end-line="380" />
           <folding>
             <element signature="e#2#88#0" expanded="true" />
-            <marker date="1594946520672" expanded="true" signature="10380:12056" ph="..." />
-            <marker date="1594946520672" expanded="true" signature="12244:12245" ph="..." />
-            <marker date="1594946520672" expanded="true" signature="12419:12447" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/family_site/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        <state relative-caret-position="663">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
           <folding>
             <element signature="e#1#33#0" expanded="true" />
           </folding>
