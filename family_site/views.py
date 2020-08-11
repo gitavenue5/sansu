@@ -315,12 +315,12 @@ class NoteCommentDeleteView(LoginRequiredMixin, DeleteView):
         return resolve_url(self.object.note)
 
 
-class KakaoView(TemplateView):
+class AniversaryView(TemplateView):
     template_name = "family_site/kakao/kakao.html"
-
-    def kakao_aniversary(self):
-        with open('2020_kakao_birthday.bin', 'wb') as ff:
-            kakao_names = {
+    today = datetime.date.today()
+    def birthday(self):
+        with open('2020_birthday.bin', 'wb') as ff:
+            names = {
                 "임수정님 생일을 축하합니다": "2020-01-03",
                 "이여혜님 생일을 축하합니다": "2020-01-10",
                 "오늘은 아버님 기일입니다": "2020-01-14",
@@ -338,32 +338,30 @@ class KakaoView(TemplateView):
                 "이민경님 생일을 축하합니다": "2020-07-04",
                 "김보민님 생일을 축하합니다": "2020-07-12",
                 "이화순님 생일을 축하합니다": "2020-07-16",
-                "eeeeeeeeeeeeeee 생일을 축하합니다": "2020-07-17",
-                "이기창님 생일을 축하합니다": "2020-08-11",
+                "이기창님 생일을 축하합니다": "2020-08-21",
                 "이상순님 생일을 축하합니다": "2020-09-16",
                 "추 석": "2020-10-01",
                 "이산하님 생일을 축하합니다": "2020-10-19",
                 "이기영님 생일을 축하합니다": "2020-10-26",
                 "이기정님 생일을 축하합니다": "2020-12-13",
             }
-            pickle.dump(kakao_names, ff)
+            pickle.dump(names, ff)
 
-        with open('2020_kakao_birthday.bin', 'rb') as f:
+        with open('2020_birthday.bin', 'rb') as f:
             a = pickle.load(f)
-            today = datetime.date.today()
 
             for key, value in a.items():
                 a[key] = key
                 time = datetime.datetime.strptime(str(value), '%Y-%m-%d').date()
 
                 if (today == time):
-                    yield "{kakao_name}".format(kakao_name=a[key])
+                    yield "{name}".format(name=a[key])
 
 
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        context["kakao_name"] = self.kakao_aniversary()
+        context["birthday"] = self.birthday()
 
         return context
 

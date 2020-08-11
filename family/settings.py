@@ -31,26 +31,25 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django.contrib.sites',
+    'django.contrib.sites',
     'family_site',
 
     'rest_framework',
-    #'rest_framework_swagger',
     'django.contrib.humanize',
-    'crispy_forms',
+
     'django_summernote',
 
-    # 'allauth',
-    # 'allauth.account',
-    # 'allauth.socialaccount',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
-    # 'allauth.socialaccount.providers.kakao',
-    # 'allauth.socialaccount.providers.daum',
-    # 'allauth.socialaccount.providers.naver',
+    'allauth.socialaccount.providers.kakao',
+    'allauth.socialaccount.providers.daum',
+    'allauth.socialaccount.providers.naver',
 ]
 
 #SITE_ID = 1
-# SITE_ID = 2
+SITE_ID = 2
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -128,10 +127,10 @@ USE_L10N = True
 USE_TZ = True
 
 
-# AUTHENTICATION_BACKENDS = [
-#     'django.contrib.auth.backends.ModelBackend',
-#     'allauth.account.auth_backends.AuthenticationBackend',
-# ]
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
 
 STATIC_URL = '/static/'
