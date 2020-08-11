@@ -39,6 +39,6 @@ urlpatterns = [
     #
     # 카카오 로그인
 
-    path('login/$', views.kakaoLoginTemplateView.as_view(), name='kakao_login'),
+
 ]
 

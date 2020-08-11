@@ -19,7 +19,7 @@ router.register(r'wrbank_api', WrBankViewSet)
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    # url(r'^accounts/', include('allauth.urls')),
+    path('accounts/', include('allauth.urls')),
 
 
     # serializer
@@ -36,7 +36,7 @@ urlpatterns = [
     #url(r'^accounts/register/done/$', UserCreateDoneTemplateView.as_view(), name='register_done'),
 
     #django summernote
-    path(r'^summernote/', include('django_summernote.urls')),
+    path('summernote/', include('django_summernote.urls')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
