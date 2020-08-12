@@ -64,7 +64,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'family.urls'
 
-# 세션 관련 
+
 SESSION_EXPIRE_AT_BROWSER_CLOSE=True
 #SESSION_COOKIE_AGE = 10
 SESSION_SAVE_EVERY_REQUEST = True
@@ -157,9 +157,9 @@ LOGOUT_URL = '/accounts/logout/'
 
 
 
-LOGIN_REDIRECT_URL = '/' # 로그인 후 리디렉션할 페이지
-ACCOUNT_LOGOUT_REDIRECT_URL = "/"  # 로그아웃 후 리디렉션 할 페이지
-ACCOUNT_LOGOUT_ON_GET = True # 로그아웃 버튼 클릭 시 자동 로그아웃
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_REDIRECT_URL = "/"
+ACCOUNT_LOGOUT_ON_GET = True 
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
