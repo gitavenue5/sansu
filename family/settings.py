@@ -159,7 +159,7 @@ LOGOUT_URL = '/accounts/logout/'
 
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_REDIRECT_URL = "/"
-ACCOUNT_LOGOUT_ON_GET = True 
+ACCOUNT_LOGOUT_ON_GET = True
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -170,7 +170,6 @@ DATETIME_FORMATS=('%Y-%m-%d %H:%M',)
 
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-#Specifies the login method to use – whether the user logs in by entering their username, e-mail address, or either one of both. Setting this to “email” requires ACCOUNT_EMAIL_REQUIRED=True
 
 
 
