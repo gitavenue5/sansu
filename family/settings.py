@@ -19,8 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1r.WvABj;1~st$IiZ)l83+#J+1tl`!5-gg>lKtvG&+qPsLhuy-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True # True 는 에러 페이지가 표시된다. 배포시는 False로
-              # False 로 하면 admin page가 제대로 나오지 않는다. 깨져서 나옴.
+DEBUG = False
+# True 는 에러 페이지가 표시된다. 배포시는 False로
+# False 로 하면 admin page가 제대로 나오지 않는다. 깨져서 나옴.
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
 
