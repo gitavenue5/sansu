@@ -7,7 +7,7 @@ from django import forms
 
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
-from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment 
+from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment
 #BIRTH_YEAR_CHOICES = ('2012', '2013', '2014', '2015','2016','2017','2018','2019','2020')
 THIS_YEAR = datetime.date.today().year
 # 날마다 폼
@@ -60,7 +60,7 @@ class NoteForm(forms.ModelForm):
         model = Note
         fields = ('note_title', 'note_content', )
         widgets = {
-            'note_content': SummernoteWidget(), 
+            'note_content': SummernoteWidget(),
         }
 
 

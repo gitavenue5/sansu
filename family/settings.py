@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'django_summernote',
+    'crispy_forms',
 
     'allauth',
     'allauth.account',
@@ -114,6 +115,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+
 #LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'ko-kr'
 
@@ -126,11 +133,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
 
 
 STATIC_URL = '/static/'

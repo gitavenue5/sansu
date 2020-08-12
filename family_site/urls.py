@@ -32,13 +32,13 @@ urlpatterns = [
     path('note_delete/<int:note_id>/', views.NoteDeleteView.as_view(), name='note_delete'),
 
     # # 게시판 댓글
-    # path('notecomment_create/(?P<pk>\d+)/$', views.NoteCommentCreateView.as_view(), name='notecomment_create'),
-    # path('notecomment_update/(?P<note_pk>\d+)/(?P<pk>\d+)/$', views.NoteCommentUpdateView.as_view(), name='notecomment_update'),
-    # path('notecomment_delete/(?P<note_pk>\d+)/(?P<pk>\d+)/$', views.NoteCommentDeleteView.as_view(), name='notecomment_delete'),
+    path('notecomment_create/<int:pk>/', views.NoteCommentCreateView.as_view(), name='notecomment_create'),
+    path('notecomment_update/<int:note_pk>)/<int:pk>/', views.NoteCommentUpdateView.as_view(), name='notecomment_update'),
+    path('notecomment_delete/<int:note_pk>)/<int:pk>/', views.NoteCommentDeleteView.as_view(), name='notecomment_delete'),
     #
     #
     # 카카오 로그인
-
+    path('kakao_login/', views.kakaoLoginTemplateView.as_view(), name='kakao_login'),
 
 ]
 

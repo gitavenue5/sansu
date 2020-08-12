@@ -23,8 +23,8 @@ import pickle, datetime
 
 from . serializers import AnniversarySerializer, GwBankSerializer, WrBankSerializer
 
-from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment 
-from . forms import DailyForm, AnniversaryForm, GwBankForm, WrBankForm, NoteForm, NoteCommentForm, NoteCommentUpdateForm 
+from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment
+from . forms import DailyForm, AnniversaryForm, GwBankForm, WrBankForm, NoteForm, NoteCommentForm, NoteCommentUpdateForm
 
 # Create your views here.
 
@@ -238,7 +238,7 @@ class WrBankListView(ListView):
 class NoteCreateView(LoginRequiredMixin, CreateView):
     model = Note
     template_name = 'family_site/note/note_create.html'
-    form_class = NoteForm    
+    form_class = NoteForm
 
     def form_valid(self, form):
         form = form.save(commit=False)
@@ -248,7 +248,7 @@ class NoteCreateView(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return reverse_lazy('family_site:note_list')
-        
+
 
 class NoteListView(ListView):
     model = Note
@@ -256,10 +256,10 @@ class NoteListView(ListView):
     paginate_by = 4
 
     def get_queryset(self, *args, **kwargs):
-        return Note.objects.select_related('note_author').all()       
+        return Note.objects.select_related('note_author').all()
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)       
+        context = super().get_context_data(**kwargs)
         return context
 
 
@@ -269,48 +269,48 @@ class NoteDetailView(LoginRequiredMixin, DetailView):
 
 class NoteUpdateView(UpdateView):
     model = Note
-    form_class = NoteForm     
+    form_class = NoteForm
     template_name = 'family_site/note/note_create.html'
     success_url = reverse_lazy('family_site:note_list')
 
-   
+
 class NoteDeleteView(LoginRequiredMixin, DeleteView):
-    model = Note 
-    success_url = reverse_lazy('family_site:note_list') 
+    model = Note
+    success_url = reverse_lazy('family_site:note_list')
     template_name = 'family_site/note/note_confirm_delete.html'
-   
+
 
 
 # 게시판 댓글
 class NoteCommentCreateView(LoginRequiredMixin, CreateView):
     model = NoteComment
     template_name = 'family_site/notecomment/notecomment_create.html'
-    form_class = NoteCommentForm  
+    form_class = NoteCommentForm
 
     def form_valid(self, form):
         kkk = form.save(commit=False)
-        kkk.note = get_object_or_404(Note, pk=self.kwargs['pk'])        
-        kkk.notecomment_author= self.request.user  
-        kkk.save()      
+        kkk.note = get_object_or_404(Note, pk=self.kwargs['pk'])
+        kkk.notecomment_author= self.request.user
+        kkk.save()
         return super().form_valid(form)
-      
-    def get_success_url(self):        
-        return resolve_url(self.object.note)        
 
- 
+    def get_success_url(self):
+        return resolve_url(self.object.note)
+
+
 class NoteCommentUpdateView(LoginRequiredMixin, UpdateView):
     model = NoteComment
     template_name = 'family_site/notecomment/notecomment_create.html'
     form_class = NoteCommentForm
 
-    def get_success_url(self):    
+    def get_success_url(self):
         return resolve_url(self.object.note)
- 
+
 class NoteCommentDeleteView(LoginRequiredMixin, DeleteView):
     model = NoteComment
     template_name = 'family_site/notecomment/notecomment_confirm_delete.html'
     form_class = NoteCommentForm
-    
+
     def get_success_url(self):
         return resolve_url(self.object.note)
 

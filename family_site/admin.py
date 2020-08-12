@@ -38,8 +38,7 @@ class NoteAdmin(SummernoteModelAdmin):
     summer_note_fields = ('note_content', )
 admin.site.register(Note, NoteAdmin)
 
-# 게시판 댓글
+#게시판 댓글
 @admin.register(NoteComment)
 class NoteCommentAdmin(admin.ModelAdmin):
     list_display = ('id', 'notecomment_author', 'notecomment_content', )
-    

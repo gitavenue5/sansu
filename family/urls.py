@@ -19,8 +19,8 @@ router.register(r'wrbank_api', WrBankViewSet)
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
 
+    path('accounts/', include('allauth.urls')),
 
     # serializer
     path('api/', include(router.urls)),  # api 홈 디렉토리
@@ -31,7 +31,7 @@ urlpatterns = [
     path('', include('family_site.urls')),
 
     # 회원, 로그인
-    #url(r'^accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     #url(r'^accounts/register/$', UserCreateView.as_view(), name='register'),
     #url(r'^accounts/register/done/$', UserCreateDoneTemplateView.as_view(), name='register_done'),
 

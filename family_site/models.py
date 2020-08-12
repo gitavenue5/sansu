@@ -99,10 +99,10 @@ class Note(models.Model):
         ordering = ('-id', )
 
     def __str__(self):
-        return self.note_content    
+        return self.note_content
 
     def get_absolute_url(self):
-        #return reverse('family_site:note_detail', args=[str(self.pk)])
+
         return reverse('family_site:note_detail', args=(self.pk,))
     # note_created_date 기준으로 이전 포스트 반환
     def get_previous_note_created_date(self):
