@@ -22,6 +22,7 @@ urlpatterns = [
 
     path('accounts/', include('allauth.urls')),
 
+
     # serializer
     path('api/', include(router.urls)),  # api 홈 디렉토리
     path('api-auth/', include('rest_framework.urls')),

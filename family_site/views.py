@@ -21,6 +21,7 @@ from rest_framework import viewsets
 
 import pickle, datetime
 
+
 from . serializers import AnniversarySerializer, GwBankSerializer, WrBankSerializer
 
 from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment
@@ -386,7 +387,6 @@ class kakaoLoginTemplateView(TemplateView):
 
 
         return context
-
 
 
 

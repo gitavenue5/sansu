@@ -11,10 +11,20 @@
     <div class="row">
         <div class="col-sm-6">
 <button type="button" style="border:0; outline:0;" onclick="location.href='{% provider_login_url "kakao" method="oauth2" process="login"%}'"><img src="{% static 'family_site/images/kakao/kakao_login_medium_narrow.png' %}" alt=""></button>&nbsp;&nbsp;
-<button type="button" style="border:0; outline:0;" onclick="location.href='{% provider_login_url "naver" method="oauth2" process="login"%}'"><img style="width:183px" src="{% static 'family_site/images/naver/네이버 아이디로 로그인_완성형_Green.png' %}" alt=""></button>
+<button type="button" style="border:0; outline:0;" onclick="location.href='{% provider_login_url "naver" method="oauth2" process="login"%}'"><img style="width:183px" src="{% static 'family_site/images/naver/naver_Green.png' %}" alt=""></button>
+        <p></p>
+
+
+
         </div>
+
     </div>
 </div>
+<p></p><br>
+ <div class="alert alert-danger"><p>이페이지에서 로그아웃했으면 반드시 다음이나 네이버에서 다시 한번 로그아웃해야, 다음이나 네이버에서도 로그아웃이 됩니다</p></div>
+ <div class="alert alert-danger"><p>이페이지에서 로그아웃하고 다음이나 네이버에서 로그아웃을 하지 않으면 다음이나 네이버에는 로그인 상태가 계속 됩니다.</p></div>
+
+
 
 
 {% endblock content1 %}

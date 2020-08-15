@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1r.WvABj;1~st$IiZ)l83+#J+1tl`!5-gg>lKtvG&+qPsLhuy-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # developer time False
 
 
@@ -65,14 +65,16 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'family.urls'
 
 
-SESSION_EXPIRE_AT_BROWSER_CLOSE=True
-#SESSION_COOKIE_AGE = 10
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 10
 SESSION_SAVE_EVERY_REQUEST = True
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [
+                  os.path.join(BASE_DIR, 'templates'),
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -147,7 +149,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 AUTH_USER_MODEL = 'auth.User'
 
 # LOGIN_URL = "/accounts/login/"
-LOGOUT_URL = '/accounts/logout/'
+#LOGOUT_URL = '/accounts/logout/'
 
 #LOGIN_REDIRECT_URL = "/"
 
