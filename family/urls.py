@@ -36,7 +36,6 @@ urlpatterns = [
     #url(r'^accounts/register/$', UserCreateView.as_view(), name='register'),
     #url(r'^accounts/register/done/$', UserCreateDoneTemplateView.as_view(), name='register_done'),
 
-    #django summernote
     path('summernote/', include('django_summernote.urls')),
 
 

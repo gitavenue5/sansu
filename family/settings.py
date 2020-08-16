@@ -66,7 +66,7 @@ ROOT_URLCONF = 'family.urls'
 
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_COOKIE_AGE = 10
+#SESSION_COOKIE_AGE = 10 이걸 사용하면 adminsite 에서 글작성하면 자꾸 로그인을 원한다.
 SESSION_SAVE_EVERY_REQUEST = True
 
 TEMPLATES = [
@@ -131,9 +131,7 @@ LANGUAGE_CODE = 'ko-kr'
 TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
@@ -148,14 +146,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTH_USER_MODEL = 'auth.User'
 
-# LOGIN_URL = "/accounts/login/"
+LOGIN_URL = "/accounts/login/"
 #LOGOUT_URL = '/accounts/logout/'
 
 #LOGIN_REDIRECT_URL = "/"
 
 #LOGOUT_REDIRECT_URL = '/'
 
-# LOGIN_REDIRECT_URL = "http://localhost:8000/accounts/kakao/login/callback/"
+
 
 
 
@@ -166,12 +164,12 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-
 DATETIME_FORMATS=('%Y-%m-%d %H:%M',)
 
 
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+# django_summernote
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 
