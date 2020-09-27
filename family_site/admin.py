@@ -3,20 +3,27 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 
 from . models import Daily, Anniversary, GwBank, WrBank, Note, NoteComment
+from django.utils.safestring import mark_safe
 
 # Register your models here.
 
 # 날마다
+@admin.register(Daily)
 class DailyAdmin(SummernoteModelAdmin):
-    summer_note_fields = ('content', )
-    list_display = ('id', 'daily_date', 'daily_content')
-    list_display_links = ('id', 'daily_date', 'daily_content')
-admin.site.register(Daily, DailyAdmin)
+    summer_note_fields = ['content']
+    list_display = ['id', 'daily_date', 'daily_content']
+    list_display_links = ['id', 'daily_date', 'daily_content']
+
+    def content_size(self, daily):
+        return mark_safe('<u>{}</u>글자'.format(len(daily.content)))
+
+    content_size.short_description = '글자수'
+#admin.site.register(Daily, DailyAdmin)
 
 # 기념일
 @admin.register(Anniversary)
 class AnniversaryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'anniversary_date', 'anniversary_name', 'anniversary_lunar_date',  )
+    list_display = ('id', 'anniversary_date', 'anniversary_name', 'anniversary_lunar_date', )
     list_display_links = ('id', 'anniversary_date', 'anniversary_name', )
 
 # 광주은행
@@ -33,7 +40,7 @@ class WrBankAdmin(admin.ModelAdmin):
     list_display_links = ('wrbank_date', 'wrbank_deposit_withdrawal', 'wrbank_money1', 'wrbank_note', 'wrbank_money2',  'wrbank_money3', )
 
 
-    # 게시판
+# 게시판
 class NoteAdmin(SummernoteModelAdmin):
     summer_note_fields = ('note_content', )
 admin.site.register(Note, NoteAdmin)
