@@ -1,5 +1,7 @@
 
 from django.contrib import admin
+
+
 from django.urls import path, include
 
 from django.conf import settings
@@ -8,7 +10,7 @@ from django.conf.urls.static import static
 from rest_framework import routers
 from family_site.views import AnniversaryViewSet, GwBankViewSet, WrBankViewSet
 
-from family.views import  SansuTemplateView #UserCreateView, UserCreateDoneTemplateView
+from family.views import SansuTemplateView #UserCreateView, UserCreateDoneTemplateView
 
 router = routers.DefaultRouter()
 router.register(r'anniversary_api', AnniversaryViewSet)
