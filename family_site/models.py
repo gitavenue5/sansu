@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse_lazy, reverse
 from django.conf import settings
-from django.contrib.auth import get_user_model
+#from django.contrib.auth import get_user_model 않종은 방법이다. 좋은 방법 AUTH_USER_MODEL
 
 # Create your models here.
 
@@ -114,6 +114,13 @@ class Note(models.Model):
 
 
 # 게시판 댓글
+
+
+
+
+
+
+# 게시판 댓글
 class NoteComment(models.Model):
     note = models.ForeignKey(Note, on_delete=models.CASCADE, related_name='comments')
     notecomment_author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -129,4 +136,39 @@ class NoteComment(models.Model):
 
     def get_queryset(self):
         return super().get_queryset().select_related('notecomment_author').all()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

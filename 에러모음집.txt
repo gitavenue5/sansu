@@ -1,0 +1,5 @@
+anaconda 가상환경 -> conda activate djanog1
+
+python manage.py runserver 문제 -->
+  notecomment_author = models.ForeignKey(settings.AUTH_USER_MODEL)
+TypeError: __init__() missing 1 required positional argument: 'on_delete'
