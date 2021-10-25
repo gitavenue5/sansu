@@ -82,9 +82,9 @@ class SansuTemplateView(TemplateView):
                 date(shift.year,8,11): "이기창님 생일을 축하합니다",
                 date(shift.year,9,16): "이상순님 생일을 축하합니다",
                 date(shift.year,10,1): "추 석",
+                date(shift.year, 10, 15): "이기영님 생일을 축하합니다",
                 date(shift.year,10,19): "이산하님 생일을 축하합니다",
-                date(shift.year,10,26): "이기영님 생일을 축하합니다",
-                date(shift.year,12,13): "이기정님 생일을 축하합니다",
+                date(shift.year,12,3): "이기정님 생일을 축하합니다",
             }
             pickle.dump(names, ff)
 
