@@ -60,6 +60,8 @@ class SansuTemplateView(TemplateView):
     def birthday(self):
         with open('2020_aniversary_note.bin', 'wb') as ff:
             shift = datetime.fromtimestamp(time(), tz=None)  # datetime.date 으로 형변환 하기 위해서, 년도 자동화
+                                                            ########### datetime.strptime('2022-07-27', '%Y-%m-%d).date()  ---> 마지막 date( ) 함수를
+                                                            ########   사용하지 않으면 00:00:00 시 분 초 까지 나온다 !+++++++++++++++++++++++++++
 
             names = {
                 date(shift.year,1,3) : "임수정님 생일을 축하합니다",
