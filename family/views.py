@@ -1,3 +1,5 @@
+from dateutil import parser
+
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
@@ -59,47 +61,51 @@ class SansuTemplateView(TemplateView):
     # 기념일 계산 제너레이터
     def birthday(self):
         with open('2020_aniversary_note.bin', 'wb') as ff:
-            shift = datetime.fromtimestamp(time(), tz=None)  # datetime.date 으로 형변환 하기 위해서, 년도 자동화
+            uuu = datetime.fromtimestamp(time(), tz=None)
+
+                                                            # datetime.date 으로 형변환 하기 위해서, 년도 자동화
                                                             ########### datetime.strptime('2022-07-27', '%Y-%m-%d).date()  ---> 마지막 date( ) 함수를
                                                             ########   사용하지 않으면 00:00:00 시 분 초 까지 나온다 !+++++++++++++++++++++++++++
 
             names = {
-                date(shift.year,1,3) : "임수정님 생일을 축하합니다",
-                date(shift.year,1,10): "이여혜님 생일을 축하합니다",
-                date(shift.year,1,14): "오늘은 아버님 기일입니다",
-                date(shift.year,1,25): "설 날",
-                date(shift.year,1,29): "강선구님 생일을 축하합니다",
-                date(shift.year,2,12): "이채순님 생일을 축하합니다",
-                date(shift.year,2,13): "이수아님 생일을 축하합니다",
-                date(shift.year,2,27): "이정순님 생일을 축하합니다",
-                date(shift.year,3,18): "박영은님 생일을 축하합니다",
-                date(shift.year,3,24): "어머님 생신을 축하드립니다",
-                date(shift.year,4,6): "김홍석님 생일을 축하합니다",
-                date(shift.year,4,29): "이돈철님 생일을 축하합니다",
-                date(shift.year,5,10): "김호중님 생일을 축하합니다",
-                date(shift.year,5,14): "이다선님 생일을 축하합니다",
-                date(shift.year,7,4): "이민경님 생일을 축하합니다",
-                date(shift.year,7,12): "김보민님 생일을 축하합니다",
-                date(shift.year,7,16): "이화순님 생일을 축하합니다",
-                date(shift.year,8,11): "이기창님 생일을 축하합니다",
-                date(shift.year,9,16): "이상순님 생일을 축하합니다",
-                date(shift.year,10,1): "추 석",
-                date(shift.year, 10, 15): "이기영님 생일을 축하합니다",
-                date(shift.year,10,19): "이산하님 생일을 축하합니다",
-                date(shift.year,12,3): "이기정님 생일을 축하합니다",
+                # date(shift.year,2,2) 이 형태는 datetime date 형이다.
+                date(uuu.year,3,5): "오늘으이 생일이다",
+                date(uuu.year, 8,22): "첫번재 입니다",
+                date(uuu.year, 8,22): "두번째 입니다",
             }
             pickle.dump(names, ff)
 
  # 데이터 형에 신경 써야 한다. datetime.date 형을 일치시켜야 한다. 꼭 print(type(a)) 형 확인을 하자
         with open('2020_aniversary_note.bin', 'rb') as f:
             a = pickle.load(f)
-            for key in a.keys():
-                print(key, type(key))
-                print("------------------------------")
-                print(date.today(),type(date.today()))
-                print("---------------------------")
-                if ( key == date.today() ):
-                    yield "{name}".format(name = a[key])
+
+            for i in a:
+                if i == date.today():
+                    print(type(i))
+                    if i == date.today():
+                        return print(a[i])
+                    return print(a[i])
+
+
+
+
+
+
+            #for i in a.keys():
+
+                #if i == date.today():
+                    #yield a[i]
+
+    #for iii in birthday(self):
+
+        #print(type(iii))
+
+
+
+            #c = datetime.strptime(b, "%Y-%m-%d").date()
+
+
+
 
 
 

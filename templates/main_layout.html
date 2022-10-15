@@ -15,6 +15,10 @@
     
     <link rel="stylesheet" type="text/css" href="{% static 'css/main_layout.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% block stylesheet %}  {% endblock stylesheet %}" />
+
+    <link rel="shortcut icon" href="#">
+
+
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>    
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -57,9 +61,7 @@
                 {% block content1 %}
 
                 {% for name in birthday %}
-
-                <div id='birthday'  class="alert alert-warning" role="alert" style='diplay:none; color:black;'><strong> {{ name }} </strong></div>
-
+                    <div id='birthday'  class="alert alert-warning" role="alert" style='diplay:none; color:black;'><strong> {{ name }} </strong></div>
                 {% endfor %}
 
                 <div id='birthday1'  class="alert alert-warning" role="alert" style='display:none; color:black;'></div>

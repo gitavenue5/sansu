@@ -1,5 +1,4 @@
 
-
 from django.shortcuts import render, get_object_or_404, resolve_url, reverse, redirect
 from django.views.generic import TemplateView, CreateView, ListView, DetailView, UpdateView, DeleteView, FormView
 from django.urls import reverse_lazy
@@ -343,8 +342,8 @@ class AniversaryView(TemplateView):
                 "이상순님 생일을 축하합니다": "2020-09-16",
                 "추 석": "2020-10-01",
                 "test": "2020-09-27",
+                "이기영님 생일을 축하합니다": "2020-10-5",
                 "이산하님 생일을 축하합니다": "2020-10-19",
-                "이기영님 생일을 축하합니다": "2020-10-26",
                 "이기정님 생일을 축하합니다": "2020-12-13",
             }
             pickle.dump(names, ff)
